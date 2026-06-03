@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Tesla 車主工具箱的附加股價頁，用免費資料源追蹤 TSLA 與相關代理標的，供車主延伸研究。"
+    >
+    <title>股價附錄 | Tesla 車主工具箱</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="stock-page">
+    <header class="site-header" aria-label="主要導覽">
+      <a class="brand" href="stock-analysis.html" aria-label="回到股價附錄頁">
+        <span class="brand-mark stock-mark" aria-hidden="true">$</span>
+        <span>股價附錄</span>
+      </a>
+      <nav class="site-nav" aria-label="頁面章節">
+        <a href="index.html">回車主工具箱</a>
+        <a href="#quote-desk">免費報價</a>
+        <a href="#coverage">研究筆記</a>
+        <a href="#scenario">情境試算</a>
+        <a href="#stock-sources">來源</a>
+        <a href="musk-empire.html">相關企業附錄</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero stock-hero" aria-label="股價附錄主視覺">
+        <img
+          class="hero-media"
+          src="assets/musk-empire-hero.png"
+          alt="地球夜景與火箭、衛星、AI 節點、電動車充電網和資訊儀表板"
+        >
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="container hero-content">
+          <p class="eyebrow">車主工具箱附錄</p>
+          <h1>股價查詢與研究筆記</h1>
+          <p class="hero-copy">
+            這不是本站主軸，只是給想順手看 TSLA 與相關代理標的的車主使用。
+            主頁仍然服務用車本身：充電、耗電、輪胎、保險、維修和長途規劃。
+          </p>
+          <div class="hero-actions" aria-label="快速前往">
+            <a class="button primary" href="index.html">回車主工具箱</a>
+            <a class="button secondary" href="#quote-desk">看免費報價</a>
+          </div>
+          <dl class="hero-facts stock-facts" aria-label="股價附錄定位">
+            <div>
+              <dt>用途</dt>
+              <dd>附加查詢，不影響主頁用車工具</dd>
+            </div>
+            <div>
+              <dt>最近報價</dt>
+              <dd id="heroQuoteDate">免費資料源自動刷新</dd>
+            </div>
+            <div>
+              <dt>限制</dt>
+              <dd>免費資料可能延遲，不作下單報價</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="pulse-band stock-pulse" id="quote-desk" aria-labelledby="quote-title">
+        <div class="container">
+          <div class="section-heading compact">
+            <p class="eyebrow dark">免費報價</p>
+            <h2 id="quote-title">TSLA 與相關代理標的</h2>
+            <p>
+              這一區只是附加價值。免費資料源走 Stooq CSV，每 60 秒刷新一次；
+              若資料源、網路或 CORS 受限，會保留頁面內建快照。
+            </p>
+          </div>
+
+          <div class="live-quote-panel" aria-live="polite">
+            <div>
+              <span>資料源</span>
+              <strong id="quoteSource">Stooq 免費 CSV</strong>
+            </div>
+            <div>
+              <span>狀態</span>
+              <strong id="quoteStatus">準備更新</strong>
+            </div>
+            <div>
+              <span>最近更新</span>
+              <strong id="quoteUpdatedAt">尚未更新</strong>
+            </div>
+            <div>
+              <span>刷新頻率</span>
+              <strong id="quoteRefreshRate">60 秒</strong>
+            </div>
+            <button class="quote-refresh-button" type="button" id="refreshQuotes">手動刷新</button>
+          </div>
+
+          <div class="stock-filter" role="group" aria-label="股票分類篩選">
+            <button class="stock-filter-button is-active" type="button" data-stock-filter="all">全部</button>
+            <button class="stock-filter-button" type="button" data-stock-filter="core">核心</button>
+            <button class="stock-filter-button" type="button" data-stock-filter="space">太空衛星</button>
+            <button class="stock-filter-button" type="button" data-stock-filter="ai">AI 算力</button>
+            <button class="stock-filter-button" type="button" data-stock-filter="ev">EV 同業</button>
+          </div>
+
+          <div class="stock-table-wrap" tabindex="0" aria-label="可交易代理標的報價表">
+            <table class="stock-table">
+              <thead>
+                <tr>
+                  <th scope="col">Ticker</th>
+                  <th scope="col">角色</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">O/C 變動</th>
+                  <th scope="col">Volume</th>
+                  <th scope="col">時間</th>
+                  <th scope="col">分析師觀點</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-stock-row="core" data-symbol="TSLA.US">
+                  <th scope="row">TSLA</th>
+                  <td>核心公開標的</td>
+                  <td data-quote-field="close">$423.74</td>
+                  <td class="positive" data-quote-field="change">+1.32%</td>
+                  <td data-quote-field="volume">37.6M</td>
+                  <td data-quote-field="time">2026-06-02 22:00</td>
+                  <td>估值高度依賴 FSD、Robotaxi、Energy 與 Optimus 是否轉成現金流。</td>
+                </tr>
+                <tr data-stock-row="space" data-symbol="RKLB.US">
+                  <th scope="row">RKLB</th>
+                  <td>小型發射 / 太空製造代理</td>
+                  <td data-quote-field="close">$123.32</td>
+                  <td class="negative" data-quote-field="change">-1.60%</td>
+                  <td data-quote-field="volume">19.5M</td>
+                  <td data-quote-field="time">2026-06-02 22:00</td>
+                  <td>SpaceX 未上市時，市場常用高 beta 太空標的觀察風險偏好。</td>
+                </tr>
+                <tr data-stock-row="space" data-symbol="ASTS.US">
+                  <th scope="row">ASTS</th>
+                  <td>直連手機衛星寬頻</td>
+                  <td data-quote-field="close">$118.17</td>
+                  <td class="positive" data-quote-field="change">+7.43%</td>
+                  <td data-quote-field="volume">21.4M</td>
+                  <td data-quote-field="time">2026-06-02 22:00</td>
+                  <td>Starlink direct-to-cell 敘事的同業比較，波動與執行風險都高。</td>
+                </tr>
+                <tr data-stock-row="space" data-symbol="IRDM.US">
+                  <th scope="row">IRDM</th>
+                  <td>成熟衛星通訊</td>
+                  <td data-quote-field="close">$49.60</td>
+                  <td class="positive" data-quote-field="change">+2.25%</td>
+                  <td data-quote-field="volume">2.2M</td>
+                  <td data-quote-field="time">2026-06-02 22:00</td>
+                  <td>較偏現金流與服務續約，用來平衡高 beta 太空標的。</td>
+                </tr>
+                <tr data-stock-row="space" data-symbol="GSAT.US">
+                  <th scope="row">GSAT</th>
+                  <td>衛星頻譜 / 消費裝置選擇權</td>
+                  <td data-quote-field="close">$82.64</td>
+                  <td class="positive" data-quote-field="change">+0.15%</td>
+                  <td data-quote-field="volume">1.3M</td>
+                  <td data-quote-field="time">2026-06-02 22:00</td>
+                  <td>重點在頻譜、裝置合作與低軌競爭格局。</td>
+                </tr>
+                <tr data-stock-row="ai" data-symbol="NVDA.US">
+                  <th scope="row">NVDA</th>
+                  <td>AI 算力供應鏈</td>
+                  <td data-quote-field="close">$222.82</td>
+                  <td class="negative" data-quote-field="change">-1.92%</td>
+                  <td data-quote-field="volume">193.4M</td>
+                  <td data-quote-field="time">2026-06-02 22:00</td>
+                  <td>xAI 算力競賽的最直接可交易代理，但估值與景氣循環敏感。</td>
+                </tr>
+                <tr data-stock-row="ai" data-symbol="GOOGL.US">
+                  <th scope="row">GOOGL</th>
+                  <td>AI 模型 + 搜尋平台</td>
+                  <td data-quote-field="close">$361.85</td>
+                  <td class="negative" data-quote-field="change">-1.29%</td>
+                  <td data-quote-field="volume">50.4M</td>
+                  <td data-quote-field="time">2026-06-02 22:00</td>
+                  <td>用來對照 Grok / X 的模型能力、分發入口與廣告商業模式。</td>
+                </tr>
+                <tr data-stock-row="ai" data-symbol="MSFT.US">
+                  <th scope="row">MSFT</th>
+                  <td>雲端 AI 平台</td>
+                  <td data-quote-field="close">$441.31</td>
+                  <td class="negative" data-quote-field="change">-1.54%</td>
+                  <td data-quote-field="volume">37.0M</td>
+                  <td data-quote-field="time">2026-06-02 22:00</td>
+                  <td>衡量企業 AI 採用、雲端毛利與模型平台化的成熟標竿。</td>
+                </tr>
+                <tr data-stock-row="ai" data-symbol="META.US">
+                  <th scope="row">META</th>
+                  <td>社群 + AI 廣告平台</td>
+                  <td data-quote-field="close">$597.63</td>
+                  <td class="negative" data-quote-field="change">-0.94%</td>
+                  <td data-quote-field="volume">18.3M</td>
+                  <td data-quote-field="time">2026-06-02 22:00</td>
+                  <td>X 的社群與廣告替代比較，重點是 engagement 與 AI 廣告效率。</td>
+                </tr>
+                <tr data-stock-row="ev" data-symbol="RIVN.US">
+                  <th scope="row">RIVN</th>
+                  <td>EV 同業需求代理</td>
+                  <td data-quote-field="close">$17.29</td>
+                  <td class="positive" data-quote-field="change">+1.77%</td>
+                  <td data-quote-field="volume">39.3M</td>
+                  <td data-quote-field="time">2026-06-02 22:00</td>
+                  <td>用來觀察北美 EV 需求、成本下降與中價位車型競爭。</td>
+                </tr>
+                <tr data-stock-row="ev" data-symbol="LCID.US">
+                  <th scope="row">LCID</th>
+                  <td>高端 EV 同業</td>
+                  <td data-quote-field="close">$6.17</td>
+                  <td class="negative" data-quote-field="change">-9.77%</td>
+                  <td data-quote-field="volume">12.8M</td>
+                  <td data-quote-field="time">2026-06-02 22:00</td>
+                  <td>高端 EV 需求與資本需求壓力的高波動參考。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="split-band analyst-band" id="coverage" aria-labelledby="coverage-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow dark">Coverage Notes</p>
+            <h2 id="coverage-title">給車主看的研究筆記</h2>
+            <p>
+              這裡不做買賣建議，只整理如果車主想了解 TSLA 和相關企業，該看哪些可交易標的和常見風險。
+            </p>
+          </div>
+
+          <div class="coverage-grid">
+            <article class="coverage-card stock-row-card" data-stock-card="core">
+              <div class="coverage-top">
+                <span>TSLA</span>
+                <strong>核心敘事股</strong>
+              </div>
+              <h3>估值不是在買汽車公司，而是在買多條選擇權</h3>
+              <p>
+                Base case 是汽車 + Energy 撐住現金流；bull case 是 FSD/Robotaxi/Optimus 開始被市場重新定價；
+                bear case 是交付成長、毛利與監管風險同時壓縮估值倍數。
+              </p>
+              <ul>
+                <li>催化劑：季度交付、毛利率、Energy 毛利、FSD 里程碑。</li>
+                <li>風險：價格戰、需求彈性、Robotaxi 時程、管理層注意力。</li>
+              </ul>
+            </article>
+
+            <article class="coverage-card stock-row-card" data-stock-card="space">
+              <div class="coverage-top">
+                <span>RKLB / ASTS / IRDM / GSAT</span>
+                <strong>SpaceX / Starlink 代理籃子</strong>
+              </div>
+              <h3>SpaceX 未上市，太空籃子的作用是讀市場風險偏好</h3>
+              <p>
+                RKLB 和 ASTS 偏高 beta 成長，IRDM 偏成熟通訊現金流，GSAT 偏頻譜與裝置合作選擇權。
+                這些不是 SpaceX 替代品，而是觀察太空資本市場情緒的代理。
+              </p>
+              <ul>
+                <li>催化劑：發射成功率、衛星部署、政府合約、直連手機進度。</li>
+                <li>風險：資本支出、監管頻譜、技術延遲、競爭補貼。</li>
+              </ul>
+            </article>
+
+            <article class="coverage-card stock-row-card" data-stock-card="ai">
+              <div class="coverage-top">
+                <span>NVDA / GOOGL / MSFT / META</span>
+                <strong>xAI / X 對照籃子</strong>
+              </div>
+              <h3>xAI 的可交易讀法，是算力、平台與分發效率</h3>
+              <p>
+                NVDA 反映 AI capex，GOOGL/MSFT 反映模型與雲端平台，META 反映社群平台如何把 AI 變成廣告效率。
+                xAI 和 X 未上市，所以應該用這些公司建立相對估值座標。
+              </p>
+              <ul>
+                <li>催化劑：模型版本、API 採用、企業合約、X Premium+ 留存。</li>
+                <li>風險：算力成本、開源競爭、平台信任、監管與內容治理。</li>
+              </ul>
+            </article>
+
+            <article class="coverage-card stock-row-card" data-stock-card="ev">
+              <div class="coverage-top">
+                <span>RIVN / LCID</span>
+                <strong>EV 同業壓力測試</strong>
+              </div>
+              <h3>EV 同業能幫 TSLA 讀出需求與資本市場風向</h3>
+              <p>
+                Rivian 比較像中價位與商用車成長參考；Lucid 更像高端 EV 需求與資本需求壓力參考。
+                如果同業同時承壓，TSLA 的汽車端估值溢價會更依賴軟體與能源驗證。
+              </p>
+              <ul>
+                <li>催化劑：交付量、單車成本、現金消耗、車型上市。</li>
+                <li>風險：需求放緩、資金稀釋、價格戰、供應鏈壓力。</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="tools-band scenario-band" id="scenario" aria-labelledby="scenario-title">
+        <div class="container">
+          <div class="section-heading compact">
+            <p class="eyebrow dark">Scenario Desk</p>
+            <h2 id="scenario-title">附加情境試算</h2>
+          </div>
+
+          <div class="scenario-grid">
+            <article class="tool-card">
+              <div class="control-list">
+                <label class="range-control">
+                  <span>TSLA 汽車毛利壓力 <output id="marginStressValue">55%</output></span>
+                  <input id="marginStress" type="range" min="0" max="100" value="55" step="5">
+                </label>
+                <label class="range-control">
+                  <span>Robotaxi / FSD 信心 <output id="fsdConfidenceValue">45%</output></span>
+                  <input id="fsdConfidence" type="range" min="0" max="100" value="45" step="5">
+                </label>
+                <label class="range-control">
+                  <span>太空與衛星風險偏好 <output id="spaceRiskValue">70%</output></span>
+                  <input id="spaceRisk" type="range" min="0" max="100" value="70" step="5">
+                </label>
+                <label class="range-control">
+                  <span>AI capex 熱度 <output id="aiHeatValue">80%</output></span>
+                  <input id="aiHeat" type="range" min="0" max="100" value="80" step="5">
+                </label>
+                <label class="range-control">
+                  <span>監管風險折價 <output id="regDiscountValue">50%</output></span>
+                  <input id="regDiscount" type="range" min="0" max="100" value="50" step="5">
+                </label>
+              </div>
+            </article>
+
+            <article class="tool-card scenario-output-card">
+              <p class="eyebrow dark">研究筆記</p>
+              <h3 id="scenarioTitle">Barbell：TSLA 敘事 + AI 現金流</h3>
+              <p id="scenarioCopy">
+                在 AI 熱度高、FSD 信心中等時，市場通常用 TSLA 買選擇權，用 NVDA/MSFT/GOOGL/META 買已驗證現金流。
+              </p>
+              <div class="score-board">
+                <div>
+                  <span>TSLA 敘事溢價</span>
+                  <meter id="teslaScoreMeter" min="0" max="100" value="50"></meter>
+                </div>
+                <div>
+                  <span>Space proxy beta</span>
+                  <meter id="spaceScoreMeter" min="0" max="100" value="70"></meter>
+                </div>
+                <div>
+                  <span>AI 現金流權重</span>
+                  <meter id="aiScoreMeter" min="0" max="100" value="80"></meter>
+                </div>
+                <div>
+                  <span>防守需求</span>
+                  <meter id="defenseScoreMeter" min="0" max="100" value="50"></meter>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sources-band" id="stock-sources" aria-labelledby="stock-sources-title">
+        <div class="container sources-layout">
+          <div>
+            <p class="eyebrow dark">資料與聲明</p>
+            <h2 id="stock-sources-title">附錄聲明</h2>
+            <p>
+              這個頁面是車主工具箱的附加研究功能，不是主服務，也不是個人化投資建議。
+              股價快照來自 Stooq；使用前請自行查核最新資料。
+            </p>
+          </div>
+          <ul class="source-list">
+            <li><a href="https://stooq.com/q/l/?s=tsla.us+rklb.us+asts.us+irdm.us+gsat.us+nvda.us+googl.us+msft.us+meta.us+rivn.us+lcid.us&amp;f=sd2t2ohlcv&amp;h&amp;e=csv">Stooq free quote CSV</a></li>
+            <li><a href="https://ir.tesla.com/">Tesla Investor Relations</a></li>
+            <li><a href="https://www.spacex.com/mission">SpaceX Mission / Reusability</a></li>
+            <li><a href="https://x.ai/">xAI</a></li>
+            <li><a href="https://help.x.com/en/using-x/x-premium">X Premium</a></li>
+            <li><a href="https://neuralink.com/patient-registry/">Neuralink Clinical Trials</a></li>
+            <li><a href="https://www.boringcompany.com/vegas-loop">The Boring Company Vegas Loop</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>股價附錄</span>
+        <span>Tesla 車主工具箱的附加查詢功能</span>
+      </div>
+    </footer>
+
+    <script src="stocks.js"></script>
+  </body>
+</html>
