@@ -2,7 +2,7 @@
 
 給台灣特斯拉車主看的用車筆記：把充電規格、轉接頭、耗電、保養、購車推薦碼與長途檢查整理在同一頁。
 
-![Tesla Model 3 charging at a Supercharger](assets/tesla-owner-hero.jpg)
+![2025 Tesla Model Y Juniper](assets/model-y-juniper-hero.webp)
 
 ## 這個專案給誰
 
@@ -20,14 +20,15 @@
 | --- | --- | --- |
 | Tesla 車主筆記 | [`index.html`](index.html) | 主頁，聚焦充電、耗電、電池、OTA、維修保值與用車成本 |
 | 新手全須知 | [`beginner-guide.html`](beginner-guide.html) | 新手頁，把 Tesla 台灣官網、支援頁與車主手冊按購車到交車後第一年整理 |
+| 配件與接頭圖鑑 | [`accessories.html`](accessories.html) | 圖片化整理 Type 2、CCS2、TPC、J1772、家充、旅充、轉接頭與交車配件 |
 | 相關企業附錄 | [`musk-empire.html`](musk-empire.html) | 附加頁，整理 Tesla 以外的相關企業訊號 |
 | 股價附錄 | [`stock-analysis.html`](stock-analysis.html) | 附加頁，用免費資料源追蹤 TSLA 與相關代理標的 |
 
 ## 車主會用到的核心功能
 
-### 頁面語氣
+### 主視覺
 
-首頁避免使用生成式圖片與空泛科技口號；主視覺改用 Bram Van Oost 在 Unsplash 發布的 Tesla Supercharger 實拍照片，前台文案以車主會直接查的問題為主。
+首頁主視覺使用 Wikimedia Commons 上 Alexander-93 拍攝的 2025 Tesla Model Y Juniper Long Range AWD 實拍照片，授權為 CC BY-SA 4.0。前台文案以車主查資料、核對規格和試算成本為主。
 
 ### 新手全須知
 
@@ -73,16 +74,16 @@
 - 台灣電力公司電價表：住宅用電與表燈時間電價
 - 台灣中油：汽柴油參考零售價格公告
 
-### 充電標準與轉接頭
+### 配件與充電接頭圖鑑
 
-主頁新增台灣車主常見的充電入門：
+[`accessories.html`](accessories.html) 新增圖片化配件頁：
 
-- Type 2 慢充：家用壁掛式充電座、目的地充電與停車場慢充
-- CCS2 快充：第三方快充與部分新式快充站可能遇到的規格
-- TPC：早期 Tesla 台灣車主需要特別確認的 Tesla 專用規格
-- J1772 / CCS1 / CHAdeMO：進口車、舊站點或多規格站點可能遇到
-- 轉接頭判斷：先確認車端規格、慢充或快充用途，以及是否使用原廠或合格設備
-- 台灣充電情境：有固定車位、沒有家充、長途旅行三種使用情境
+- Type 2、CCS2、TPC、J1772、CHAdeMO / CCS1 規格表
+- Tesla Type 2 壁掛座、TPC 壁掛座、Type 2 旅充、CCS2 轉接頭、J1772 轉接器
+- JOWUA Model Y 後廂墊 / 收納組、Model 3/Y 螢幕保護貼
+- Tesla Air Compressor + Tire Repair Kit 3.0
+- 每張產品卡包含圖片、用途、規格限制、官方或商店連結
+- 圖片轉成 WebP 放在 `assets/accessories/`
 
 這一段引用 Tesla 台灣家用充電、Tesla 充電產品與轉接器指南、經濟部標準檢驗局充電設備規範，以及 ARTC 電動車充電介面資料。
 
@@ -92,8 +93,8 @@
 
 - Tesla 推薦連結：`https://ts.la/wulingteen795928`
 - 導購揭露：Tesla referral 可能提供購車優惠或推薦回饋
-- 配件導購：JOWUA、EVANNEX、Abstract Ocean
-- 配件商目前放商店與分潤申請入口；等取得個人追蹤連結後，需要替換成專屬連結才會分潤
+- 配件商入口：JOWUA、EVANNEX、Abstract Ocean
+- 分潤揭露：配件商目前列出商店與分潤申請入口；實際分潤依商店核准帳號與追蹤連結為準
 
 配件清單先聚焦車主最常需要的品類：腳踏墊 / 後廂墊、螢幕保護貼、充電線材收納、補胎與胎壓工具、轉接頭相容性確認。
 
@@ -158,6 +159,7 @@ http://127.0.0.1:4174/stock-analysis.html
 如果只部署靜態頁面，GitHub Pages 可以直接使用：
 
 - `index.html`
+- `accessories.html`
 - `beginner-guide.html`
 - `musk-empire.html`
 - `stock-analysis.html`
@@ -174,8 +176,11 @@ http://127.0.0.1:4174/stock-analysis.html
 ```text
 .
 ├── assets/
+│   ├── accessories/
+│   ├── model-y-juniper-hero.webp
 │   ├── tesla-owner-hero.jpg
 │   └── musk-empire-hero.png
+├── accessories.html
 ├── beginner-guide.html
 ├── index.html
 ├── musk-empire.html

@@ -128,7 +128,7 @@ input {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: 64% center;
 }
 
 .hero-shade {
@@ -700,6 +700,180 @@ input {
   margin: 18px 0 0;
   color: var(--muted-dark);
   font-size: 14px;
+}
+
+.accessories-page {
+  background: var(--paper);
+}
+
+.accessory-hero-band {
+  padding: 92px 0 72px;
+  background: var(--white);
+}
+
+.accessory-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1fr);
+  gap: 38px;
+  align-items: center;
+}
+
+.accessory-hero-layout h1 {
+  margin: 0;
+  color: var(--black);
+  font-size: clamp(44px, 6vw, 76px);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.accessory-hero-layout p:not(.eyebrow) {
+  margin: 20px 0 0;
+  max-width: 660px;
+  color: var(--muted);
+  font-size: 19px;
+}
+
+.accessory-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.accessory-visual-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8f8f8;
+}
+
+.accessory-visual-grid img:nth-child(3),
+.accessory-visual-grid img:nth-child(4) {
+  aspect-ratio: 4 / 3;
+}
+
+.connector-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.connector-gallery article {
+  min-height: 360px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.connector-gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  padding: 10px;
+  border-radius: 6px;
+  background: var(--white);
+}
+
+.connector-gallery h3 {
+  margin: 16px 0 6px;
+  font-size: 24px;
+}
+
+.connector-gallery p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.spec-table-wrap {
+  margin-top: 24px;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.spec-table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+}
+
+.spec-table th,
+.spec-table td {
+  padding: 15px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+
+.spec-table thead th {
+  color: var(--white);
+  background: var(--graphite);
+}
+
+.spec-table tbody th {
+  width: 130px;
+  color: var(--black);
+  font-weight: 850;
+}
+
+.spec-table tbody tr:last-child th,
+.spec-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.product-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.product-card {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 20px;
+  min-height: 330px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 10px 24px rgba(17, 17, 19, 0.08);
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  align-self: start;
+  padding: 12px;
+  border-radius: 6px;
+  background: #f8f8f8;
+}
+
+.product-card h3 {
+  margin: 12px 0 8px;
+  color: var(--black);
+  font-size: 24px;
+  line-height: 1.24;
+}
+
+.product-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.product-card ul {
+  margin: 14px 0 16px;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.accessory-products .product-card img {
+  aspect-ratio: 4 / 3;
 }
 
 .split-band {
@@ -1298,7 +1472,7 @@ input {
 }
 
 .beginner-hero .hero-media {
-  object-position: center center;
+  object-position: 64% center;
 }
 
 .guide-band {
@@ -2348,6 +2522,8 @@ input {
   .pulse-grid,
   .charging-grid,
   .affiliate-grid,
+  .connector-gallery,
+  .product-card-grid,
   .signal-grid,
   .timeline {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2357,6 +2533,7 @@ input {
   .tool-grid,
   .sources-layout,
   .owner-data-panel,
+  .accessory-hero-layout,
   .affiliate-hero-card,
   .adapter-panel {
     grid-template-columns: 1fr;
@@ -2453,6 +2630,7 @@ input {
   .pulse-band,
   .charging-band,
   .affiliate-band,
+  .accessory-hero-band,
   .split-band,
   .tools-band,
   .timeline-band,
@@ -2470,6 +2648,8 @@ input {
   .charging-card,
   .affiliate-card,
   .affiliate-hero-card,
+  .connector-gallery article,
+  .product-card,
   .beginner-stats article,
   .guide-card,
   .delivery-flow article,
@@ -2488,6 +2668,32 @@ input {
   .taiwan-charging-grid article {
     min-height: 0;
     padding: 22px;
+  }
+
+  .accessory-hero-layout {
+    gap: 24px;
+  }
+
+  .accessory-hero-layout h1 {
+    font-size: 40px;
+  }
+
+  .accessory-hero-layout p:not(.eyebrow) {
+    font-size: 16px;
+  }
+
+  .accessory-visual-grid,
+  .connector-gallery,
+  .product-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    max-height: 260px;
   }
 
   .number-grid,
