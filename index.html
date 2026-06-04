@@ -5,58 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Tesla 車主工具箱整理充電、耗電、電池習慣、OTA、維修保值與長途規劃，幫車主估算真實用車成本。"
+      content="台灣 Tesla 車主筆記，整理充電規格、轉接頭、耗電、保養、購車推薦碼與一年用車成本。"
     >
-    <title>Tesla 車主工具箱 | 充電、耗電與保養筆記</title>
+    <title>Tesla 車主筆記 | 台灣充電、耗電與保養</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header" aria-label="主要導覽">
-      <a class="brand" href="#top" aria-label="回到 Tesla 車主工具箱首頁">
+      <a class="brand" href="#top" aria-label="回到 Tesla 車主筆記首頁">
         <span class="brand-mark" aria-hidden="true">T</span>
-        <span>Tesla 車主工具箱</span>
+        <span>Tesla 車主筆記</span>
       </a>
       <nav class="site-nav" aria-label="頁面章節">
-        <a href="#dashboard">用車重點</a>
+        <a href="beginner-guide.html">新手全須知</a>
+        <a href="#dashboard">常用數字</a>
         <a href="#charging-basics">充電標準</a>
+        <a href="#buyer-links">購車 / 配件</a>
         <a href="#radar">檢查清單</a>
         <a href="#tools">成本試算</a>
         <a href="#sources">資料來源</a>
-        <a href="stock-analysis.html">股價附錄</a>
+        <a href="stock-analysis.html">股價</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero" aria-label="Tesla 車主工具箱主視覺">
+      <section class="hero" aria-label="Tesla 車主筆記主視覺">
         <img
           class="hero-media"
-          src="assets/tesla-radar-hero.png"
-          alt="紅色電動車停在夜間充電站"
+          src="assets/tesla-owner-hero.jpg"
+          alt="黑色 Tesla Model 3 在 Supercharger 旁充電"
         >
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="container hero-content">
-          <p class="eyebrow">車主日常工具</p>
-          <h1>Tesla 車主工具箱</h1>
+          <p class="eyebrow">台灣車主筆記</p>
+          <h1>Tesla 車主筆記</h1>
           <p class="hero-copy">
-            幫你把每天會遇到的事整理清楚：充電要花多少、家充比例怎麼抓、
-            輪胎和耗材要準備多少、OTA 後哪些地方值得觀察，長途前也有一份檢查清單。
+            買車前、交車後、第一次跑長途，都會用到同一批問題：能不能穩定充電、
+            一年大概要花多少、哪些配件真的先買就好，還有資料來源在哪裡。
           </p>
           <div class="hero-actions" aria-label="快速前往">
-            <a class="button primary" href="#tools">試算用車成本</a>
-            <a class="button secondary" href="#radar">看檢查清單</a>
+            <a class="button primary" href="https://ts.la/wulingteen795928" target="_blank" rel="sponsored noopener noreferrer">用我的推薦連結購車</a>
+            <a class="button primary" href="#tools">算一年成本</a>
+            <a class="button secondary" href="#radar">長途前檢查</a>
           </div>
           <dl class="hero-facts" aria-label="核心定位">
             <div>
-              <dt>日常</dt>
-              <dd>充電、耗電、輪胎、保險</dd>
+              <dt>每天</dt>
+              <dd>家充、快充、胎壓</dd>
             </div>
             <div>
-              <dt>長途</dt>
-              <dd>路線、空樁、快充、備用方案</dd>
+              <dt>花費</dt>
+              <dd>電費、輪胎、保險</dd>
             </div>
             <div>
-              <dt>整理日期</dt>
-              <dd>2026-06-03</dd>
+              <dt>更新</dt>
+              <dd>2026-06-04</dd>
             </div>
           </dl>
         </div>
@@ -65,10 +68,10 @@
       <section class="pulse-band" id="dashboard" aria-labelledby="pulse-title">
         <div class="container">
           <div class="section-heading compact">
-            <p class="eyebrow dark">有來源的數據</p>
-            <h2 id="pulse-title">先看可以核對的車主數字</h2>
+            <p class="eyebrow dark">先核對</p>
+            <h2 id="pulse-title">幾個會影響用車的數字</h2>
             <p>
-              下列資料以 2026-06-03 查核為準。EPA 數據用來校準耗電級距；保固、保養與超充規則採 Tesla 台灣支援頁面。
+              下列資料以 2026-06-03 查核為準。EPA 用來抓耗電級距；保固、保養與超充規則採 Tesla 台灣支援頁面。
             </p>
           </div>
           <div class="pulse-grid">
@@ -79,7 +82,7 @@
               <a class="source-chip" href="https://www.fueleconomy.gov/ws/rest/vehicle/49744">FuelEconomy.gov ID 49744</a>
             </article>
             <article class="metric-card">
-              <p class="metric-label">台灣新車基本保固</p>
+              <p class="metric-label">新車基本保固</p>
               <strong>4 年</strong>
               <span>或 80,000 公里，以先到者為準。中古車、延長保固與車輛隨附條款仍需個別核對。</span>
               <a class="source-chip" href="https://www.tesla.com/zh_tw/support/vehicle-warranty">Tesla 台灣保固</a>
@@ -100,10 +103,10 @@
 
           <div class="owner-data-panel" aria-labelledby="epa-table-title">
             <div>
-              <p class="eyebrow dark">能耗對照</p>
-              <h3 id="epa-table-title">EPA 2026 車款資料，換算成車主常用單位</h3>
+              <p class="eyebrow dark">能耗基準</p>
+              <h3 id="epa-table-title">EPA 2026 車款資料，換成常用單位</h3>
               <p>
-                EPA 是美國測試資料，車輛配備、輪圈、氣候與駕駛方式都會讓實際耗電不同。這張表適合拿來抓試算器的基準，不適合當保證續航。
+                EPA 是美國測試資料，輪圈、氣候、車速和駕駛方式都會讓實際耗電不同。這張表只拿來當試算基準，不當保證續航。
               </p>
             </div>
             <div class="owner-data-table-wrap">
@@ -173,7 +176,7 @@
             <p class="eyebrow dark">台灣充電環境</p>
             <h2 id="charging-title">先搞懂插頭，再規劃路線</h2>
             <p>
-              Tesla 車主最常混淆的是「慢充 / 快充」、「車端規格」和「轉接頭能不能用」。以下用台灣情境整理，並把來源放在每張卡上。
+              台灣車主最常卡在三件事：慢充或快充、車端是哪種規格、轉接頭到底能不能用。下面直接照會遇到的情境整理。
             </p>
           </div>
 
@@ -260,7 +263,7 @@
               <p class="eyebrow dark">轉接頭判斷</p>
               <h3 id="adapter-title">買轉接頭前先問三件事</h3>
               <p>
-                轉接頭不是越多越好。高電流快充時，最重要的是車端相容、轉接頭用途正確、充電設備有檢定與清楚計費。
+                轉接頭不是越多越好。高電流快充時，先確認車端相容、轉接頭用途正確、設備有檢定，計費也要看得懂。
               </p>
             </div>
             <div class="adapter-checklist">
@@ -299,21 +302,93 @@
         </div>
       </section>
 
+      <section class="affiliate-band" id="buyer-links" aria-labelledby="buyer-links-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow dark">購車與配件</p>
+            <h2 id="buyer-links-title">推薦碼放前面，配件只留必要清單</h2>
+            <p>
+              本頁含 Tesla 推薦連結與配件商入口。有回饋或分潤的地方會明講；配件先從交車後最容易用到的東西開始，不把整車塞滿。
+            </p>
+          </div>
+
+          <div class="affiliate-hero-card">
+            <div>
+              <p class="eyebrow">Tesla 推薦碼</p>
+              <h3>用我的 Tesla 推薦連結購車</h3>
+              <p>
+                透過這個 Tesla 推薦連結購車，最高可折抵 NT$8,000。實際優惠、適用車款與活動期間，仍以 Tesla 結帳頁顯示為準。
+              </p>
+              <code>https://ts.la/wulingteen795928</code>
+            </div>
+            <a class="button primary" href="https://ts.la/wulingteen795928" target="_blank" rel="sponsored noopener noreferrer">打開推薦連結</a>
+          </div>
+
+          <div class="affiliate-grid" aria-label="Tesla 配件導購">
+            <article class="affiliate-card affiliate-card-feature">
+              <span class="affiliate-label">先買清單</span>
+              <h3>交車前，我會先看這五類</h3>
+              <ul>
+                <li>腳踏墊、後廂墊、防水收納。</li>
+                <li>螢幕保護貼、遮陽與車內清潔用品。</li>
+                <li>家充線材收納、壁掛座與線纜管理。</li>
+                <li>補胎工具、胎壓表、行車安全備品。</li>
+                <li>轉接頭先確認車端規格，不要憑型號猜。</li>
+              </ul>
+            </article>
+
+            <article class="affiliate-card">
+              <span class="affiliate-label">可做導購</span>
+              <h3>JOWUA</h3>
+              <p>台灣車主常買的 Tesla 配件品牌，品項偏內裝、防護、收納與充電周邊。官方有 affiliate program 頁面。</p>
+              <div class="affiliate-actions">
+                <a class="source-chip" href="https://www.jowua-life.com/" target="_blank" rel="noopener noreferrer">商店</a>
+                <a class="source-chip" href="https://www.jowua-life.com/en-es/pages/affiliate-program" target="_blank" rel="noopener noreferrer">申請分潤</a>
+              </div>
+            </article>
+
+            <article class="affiliate-card">
+              <span class="affiliate-label">可做導購</span>
+              <h3>EVANNEX</h3>
+              <p>美國 Tesla 配件商，品項多，適合補充台灣不容易買到的外觀、收納與保護類配件。</p>
+              <div class="affiliate-actions">
+                <a class="source-chip" href="https://evannex.com/" target="_blank" rel="noopener noreferrer">商店</a>
+                <a class="source-chip" href="https://evannex.com/pages/partner-with-evannex" target="_blank" rel="noopener noreferrer">申請分潤</a>
+              </div>
+            </article>
+
+            <article class="affiliate-card">
+              <span class="affiliate-label">申請入口</span>
+              <h3>Abstract Ocean</h3>
+              <p>Tesla / Rivian 配件商，頁尾有分潤申請入口。適合找保護貼、內裝整理和小型實用配件。</p>
+              <div class="affiliate-actions">
+                <a class="source-chip" href="https://www.abstractocean.com/" target="_blank" rel="noopener noreferrer">商店</a>
+                <a class="source-chip" href="https://www.abstractocean.com/" target="_blank" rel="noopener noreferrer">頁尾申請</a>
+              </div>
+            </article>
+          </div>
+
+          <p class="affiliate-disclosure">
+            導購揭露：本頁的 Tesla 推薦連結可能帶來購車優惠或推薦回饋。配件商目前先放官方商店與申請入口；正式分潤連結上線後，會以 sponsored / affiliate 屬性標示。
+          </p>
+        </div>
+      </section>
+
       <section class="split-band" aria-labelledby="why-title">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow dark">車主視角</p>
-            <h2 id="why-title">少一點規格表，多一點真實用車</h2>
+            <p class="eyebrow dark">車主經驗</p>
+            <h2 id="why-title">開一陣子才會在意的事</h2>
             <p>
-              很多介紹只講加速、續航和科技感，但車主每天碰到的是充電、耗電、輪胎、保險、維修等待和 OTA 變化。
-              這個頁面先把這些日常問題整理好。
+              規格表很容易查，真正麻煩的是日常：下班要不要補電、輪胎多久換、保險怎麼估、OTA 後有沒有變耗電。
+              這頁先把這些事情放在同一個地方。
             </p>
           </div>
 
           <div class="lens-grid">
             <article class="lens-card owner">
               <span class="lens-icon" aria-hidden="true">kWh</span>
-              <h3>日常會想記錄</h3>
+              <h3>每週會看</h3>
               <ul>
                 <li>家充比例、旅途快充可用性與尖離峰費率。</li>
                 <li>輪胎、保險、保固、電池衰退與二手殘值。</li>
@@ -323,7 +398,7 @@
             </article>
             <article class="lens-card trip">
               <span class="lens-icon" aria-hidden="true">Trip</span>
-              <h3>長途前會想確認</h3>
+              <h3>出遠門前會查</h3>
               <ul>
                 <li>目的地附近有沒有可用充電站和備用站點。</li>
                 <li>高速耗電、天氣、載重和回程電量是否保守估計。</li>
@@ -338,10 +413,10 @@
       <section class="radar-band" id="radar" aria-labelledby="radar-title">
         <div class="container radar-layout">
           <div class="section-heading">
-            <p class="eyebrow">車主檢查清單</p>
-            <h2 id="radar-title">依照使用情境切換重點</h2>
+            <p class="eyebrow">檢查清單</p>
+            <h2 id="radar-title">照情境看，不用一次全背</h2>
             <p>
-              這裡不做花俏的科技圖。你可以切換日常、長途、保養，快速看哪些事情該先確認。
+              按日常、長途、保養切換，先看這趟或這一週真正需要確認的項目。
             </p>
             <div class="mode-switch" role="group" aria-label="切換檢查清單情境">
               <button class="mode-button is-active" type="button" data-mode="all">全部</button>
@@ -355,12 +430,12 @@
             <article>
               <span>01</span>
               <strong>每天</strong>
-              <p>通勤里程、停車位置、家充時段、胎壓。</p>
+              <p>電量上限、家充時段、停車位置、胎壓。</p>
             </article>
             <article>
               <span>02</span>
               <strong>每週</strong>
-              <p>耗電曲線、雨刷、胎面、車內濾網狀態。</p>
+              <p>耗電變化、雨刷、胎面、異音或提醒。</p>
             </article>
             <article>
               <span>03</span>
@@ -378,24 +453,24 @@
         <div class="container signal-grid" aria-live="polite">
           <article class="signal-card" data-audience="daily">
             <p class="signal-tag">日常</p>
-            <h3>充電不是只有速度，是路線可靠度</h3>
+            <h3>先看會不會順路補電</h3>
             <p>
-              真正影響體驗的是到站有沒有空位、尖離峰價差、車會不會預熱電池，以及你是否有備用充電點。
+              體驗差不差，不只看快充速度。到站有沒有空位、尖離峰價差、車會不會預熱電池，都會影響時間。
             </p>
           </article>
           <article class="signal-card" data-audience="trip">
             <p class="signal-tag">長途</p>
-            <h3>高速耗電要保守估</h3>
+            <h3>高速耗電留餘裕</h3>
             <p>
               逆風、雨天、滿載、冷氣和山路都會拉高耗電。長途規劃寧可多留 10% 到 15% 電量。
             </p>
           </article>
           <article class="signal-card" data-audience="daily">
             <p class="signal-tag">日常</p>
-            <h3>電池健康是行為題，不只是規格題</h3>
+            <h3>高電量停放別變成日常</h3>
             <p>
               高速快充頻率、長時間高電量停放、氣候與輪胎設定都會影響耗電與衰退。
-              比起追絕對數字，先養成穩定的充電和停放習慣。
+              比起追絕對數字，先把充電和停放習慣固定下來。
             </p>
           </article>
           <article class="signal-card" data-audience="service">
@@ -407,7 +482,7 @@
           </article>
           <article class="signal-card" data-audience="daily">
             <p class="signal-tag">日常</p>
-            <h3>OTA 更新要看功能，也要看副作用</h3>
+            <h3>OTA 更新後觀察一週</h3>
             <p>
               續航估算、雨刷、輔助駕駛、車機反應和安全提醒都可能被軟體更新改變。
               更新後最好記錄一週，別只看發布說明。
@@ -426,14 +501,14 @@
       <section class="tools-band" id="tools" aria-labelledby="tools-title">
         <div class="container">
           <div class="section-heading compact">
-            <p class="eyebrow dark">估算工具</p>
-            <h2 id="tools-title">先算自己的用車條件</h2>
+            <p class="eyebrow dark">自己代數字</p>
+            <h2 id="tools-title">先算你的里程與充電比例</h2>
           </div>
 
           <div class="tool-grid">
             <article class="tool-card">
               <div class="tool-heading">
-                <p class="eyebrow dark">車主版</p>
+                <p class="eyebrow dark">試算</p>
                 <h3>年度用車成本試算</h3>
               </div>
               <div class="control-list">
@@ -497,7 +572,7 @@
 
             <article class="tool-card">
               <div class="tool-heading">
-                <p class="eyebrow dark">車主備忘錄</p>
+                <p class="eyebrow dark">買車前</p>
                 <h3>買車前先問自己這幾題</h3>
               </div>
               <ul class="owner-checklist">
@@ -518,10 +593,10 @@
       <section class="timeline-band" aria-labelledby="timeline-title">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow dark">後續可以補的車主資料</p>
-            <h2 id="timeline-title">把真實用車經驗慢慢補齊</h2>
+            <p class="eyebrow dark">車主回報</p>
+            <h2 id="timeline-title">缺資料的地方，慢慢補</h2>
             <p>
-              這個頁面之後最值得補的不是新聞，而是真實車主回報。越多實際資料，試算才會越貼近生活。
+              這頁最需要的不是更多新聞，而是車主實際回報。資料越多，試算才越接近日常。
             </p>
           </div>
 
@@ -529,7 +604,7 @@
             <article>
               <span>01</span>
               <h3>每月電費回報</h3>
-              <p>OTA 更新、充電費率、服務中心等待、保險與二手車行情。</p>
+              <p>每月 kWh、家充比例、快充次數、台電帳單與停車費。</p>
             </article>
             <article>
               <span>02</span>
@@ -554,12 +629,18 @@
         <div class="container sources-layout">
           <div>
             <p class="eyebrow dark">資料來源</p>
-            <h2 id="sources-title">來源透明，數字自己再核對</h2>
+            <h2 id="sources-title">來源列出來，數字自己再核對</h2>
             <p>
-              頁面中的官方資訊以 2026-06-03 查核為準。不同地區電價、保險、維修等待和充電費率會差很多，試算前請用自己的條件調整。
+              官方資訊以 2026-06-03 查核為準。電價、保險、維修等待和充電費率會依地區與時間變動，試算前請改成自己的條件。
             </p>
           </div>
           <ul class="source-list">
+            <li>
+              <a href="https://unsplash.com/photos/a-tesla-electric-car-charging-at-a-charging-station-W8IvFdsKsl8">
+                <span>Unsplash 實拍照片：Bram Van Oost</span>
+                <small>首頁主視覺使用 Tesla Model 3 Highland 於 Supercharger 充電的真實攝影素材。</small>
+              </a>
+            </li>
             <li>
               <a href="https://www.tesla.com/zh_tw/support/vehicle-warranty">
                 <span>Tesla 台灣車輛保固</span>
@@ -627,6 +708,24 @@
               </a>
             </li>
             <li>
+              <a href="https://www.jowua-life.com/en-es/pages/affiliate-program">
+                <span>JOWUA 分潤申請頁</span>
+                <small>Tesla 配件商分潤申請入口，需取得個人追蹤連結後才會分潤。</small>
+              </a>
+            </li>
+            <li>
+              <a href="https://evannex.com/pages/partner-with-evannex">
+                <span>EVANNEX 合作夥伴頁</span>
+                <small>EVANNEX 官方合作夥伴說明，包含佣金與追蹤網路資訊。</small>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.abstractocean.com/">
+                <span>Abstract Ocean</span>
+                <small>Tesla / Rivian 配件商；頁尾有分潤申請入口，導購前需申請專屬連結。</small>
+              </a>
+            </li>
+            <li>
               <a href="https://www.cpc.com.tw/?ccms_cs=1">
                 <span>台灣中油全球資訊網</span>
                 <small>汽柴油參考零售價格與油價公告；試算前請核對最新週期。</small>
@@ -645,8 +744,8 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <span>Tesla 車主工具箱</span>
-        <span>充電、耗電、保養與長途規劃</span>
+        <span>Tesla 車主筆記</span>
+        <span>充電、耗電、保養與長途檢查</span>
       </div>
     </footer>
 

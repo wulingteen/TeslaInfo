@@ -1,8 +1,8 @@
-# Tesla 車主工具箱
+# Tesla 車主筆記
 
-給特斯拉車主看的用車情報室：把充電、耗電、電池習慣、OTA 更新、維修保值與長途規劃整理成一個可以直接使用的網頁工具。
+給台灣特斯拉車主看的用車筆記：把充電規格、轉接頭、耗電、保養、購車推薦碼與長途檢查整理在同一頁。
 
-![Tesla Signal Room hero](assets/tesla-radar-hero.png)
+![Tesla Model 3 charging at a Supercharger](assets/tesla-owner-hero.jpg)
 
 ## 這個專案給誰
 
@@ -18,11 +18,28 @@
 
 | 頁面 | 檔案 | 車主用途 |
 | --- | --- | --- |
-| Tesla 車主工具箱 | [`index.html`](index.html) | 主頁，聚焦充電、耗電、電池、OTA、維修保值與用車成本 |
+| Tesla 車主筆記 | [`index.html`](index.html) | 主頁，聚焦充電、耗電、電池、OTA、維修保值與用車成本 |
+| 新手全須知 | [`beginner-guide.html`](beginner-guide.html) | 新手頁，把 Tesla 台灣官網、支援頁與車主手冊按購車到交車後第一年整理 |
 | 相關企業附錄 | [`musk-empire.html`](musk-empire.html) | 附加頁，整理 Tesla 以外的相關企業訊號 |
 | 股價附錄 | [`stock-analysis.html`](stock-analysis.html) | 附加頁，用免費資料源追蹤 TSLA 與相關代理標的 |
 
 ## 車主會用到的核心功能
+
+### 頁面語氣
+
+首頁避免使用生成式圖片與空泛科技口號；主視覺改用 Bram Van Oost 在 Unsplash 發布的 Tesla Supercharger 實拍照片，前台文案以車主會直接查的問題為主。
+
+### 新手全須知
+
+[`beginner-guide.html`](beginner-guide.html) 是給準車主與剛交車車主看的官方資訊索引。它不複製 Tesla 官網全文，而是把 Tesla 台灣官網、支援頁、線上商店與車主手冊整理成新手順序：
+
+- 購車前：試駕、下訂、付款、登記、保險、充電條件
+- 交車：交付前準備、交付當日、交車後第一週
+- 充電：家充、超充、第三方快充、目的地充電、轉接頭
+- 保養與保固：保養週期、輪胎、濾網、電池與驅動單元保固
+- 服務與救援：App 預約、行動服務、道路救援、客戶服務
+- 軟體與帳戶：Tesla App、OTA、升級、所有權轉移
+- 官方來源：每個主題都連回 Tesla 官方頁面核對原文
 
 ### 年度用車成本試算
 
@@ -68,6 +85,17 @@
 - 台灣充電情境：有固定車位、沒有家充、長途旅行三種使用情境
 
 這一段引用 Tesla 台灣家用充電、Tesla 充電產品與轉接器指南、經濟部標準檢驗局充電設備規範，以及 ARTC 電動車充電介面資料。
+
+### 導購與推薦碼
+
+主頁新增購車與配件導購區：
+
+- Tesla 推薦連結：`https://ts.la/wulingteen795928`
+- 導購揭露：Tesla referral 可能提供購車優惠或推薦回饋
+- 配件導購：JOWUA、EVANNEX、Abstract Ocean
+- 配件商目前放商店與分潤申請入口；等取得個人追蹤連結後，需要替換成專屬連結才會分潤
+
+配件清單先聚焦車主最常需要的品類：腳踏墊 / 後廂墊、螢幕保護貼、充電線材收納、補胎與胎壓工具、轉接頭相容性確認。
 
 ### 車主檢查清單
 
@@ -130,6 +158,7 @@ http://127.0.0.1:4174/stock-analysis.html
 如果只部署靜態頁面，GitHub Pages 可以直接使用：
 
 - `index.html`
+- `beginner-guide.html`
 - `musk-empire.html`
 - `stock-analysis.html`
 - `styles.css`
@@ -145,8 +174,9 @@ http://127.0.0.1:4174/stock-analysis.html
 ```text
 .
 ├── assets/
-│   ├── tesla-radar-hero.png
+│   ├── tesla-owner-hero.jpg
 │   └── musk-empire-hero.png
+├── beginner-guide.html
 ├── index.html
 ├── musk-empire.html
 ├── stock-analysis.html
