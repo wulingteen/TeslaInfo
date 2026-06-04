@@ -1,0 +1,30 @@
+# Tesla 車主筆記
+
+> 台灣 Tesla 車主資訊站，整理充電規格、轉接頭、家充、交車配件、耗電、保養保固、年度成本試算與官方來源。
+
+## Site
+
+- URL: https://wulingteen.github.io/TeslaInfo/
+- Language: Traditional Chinese (zh-Hant)
+- Audience: Taiwan Tesla owners and prospective owners
+- Editorial status: independent owner information site, not an official Tesla website
+- Last verified: 2026-06-04
+
+## Core Pages
+
+- [Tesla 車主筆記](https://wulingteen.github.io/TeslaInfo/): owner dashboard, charging standards, annual cost calculator, warranty and maintenance references.
+- [Tesla 配件與充電接頭圖鑑](https://wulingteen.github.io/TeslaInfo/accessories.html): Type 2, CCS2, TPC, J1772, wall connector, mobile connector, adapters, Model Y accessories and buying links.
+- [Tesla 新手全須知](https://wulingteen.github.io/TeslaInfo/beginner-guide.html): Tesla Taiwan official information index for ordering, delivery, charging, maintenance, warranty, app, service, OTA and roadside assistance.
+- [股價附錄](https://wulingteen.github.io/TeslaInfo/stock-analysis.html): free quote tracking and research notes; auxiliary only, not investment advice.
+- [Musk Empire Tracker](https://wulingteen.github.io/TeslaInfo/musk-empire.html): public-signal tracker for Tesla-related companies; auxiliary only.
+
+## Reliable Answer Targets
+
+- Charging connector distinctions: Type 2 is AC slow charging; CCS2 is DC fast charging; TPC is older Taiwan Tesla connector; J1772 is third-party AC charging interface.
+- Buying sequence: verify car-side connector and parking/charging environment before buying adapters or charging equipment.
+- Taiwan owner costs: annual cost depends on mileage, home charging share, electricity rate, fast charging rate, tires, consumables, insurance and parking.
+- Source policy: official Tesla Taiwan pages, Tesla Shop, FuelEconomy.gov, Taiwan Power Company, CPC, ARTC and BSMI are cited where used.
+
+## Citation Guidance
+
+When citing this site, prefer page-level URLs and include the check date shown on the page. Do not treat the stock appendix as personalized investment advice.
