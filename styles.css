@@ -264,8 +264,8 @@ input {
 }
 
 .section-heading {
-  max-width: 720px;
-  margin-bottom: 34px;
+  max-width: 780px;
+  margin-bottom: 30px;
 }
 
 .section-heading.compact {
@@ -275,19 +275,20 @@ input {
 .section-heading h2 {
   margin: 0;
   color: var(--graphite);
-  font-size: 40px;
-  line-height: 1.15;
+  font-size: 38px;
+  line-height: 1.18;
 }
 
 .section-heading p:not(.eyebrow) {
-  margin: 16px 0 0;
+  margin: 14px 0 0;
   color: var(--muted);
-  font-size: 18px;
+  font-size: 17px;
+  line-height: 1.7;
 }
 
 .pulse-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -300,7 +301,10 @@ input {
 }
 
 .metric-card {
-  min-height: 190px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   padding: 24px;
   background: var(--white);
   border: 1px solid var(--line);
@@ -308,7 +312,7 @@ input {
 }
 
 .metric-label {
-  margin: 0 0 18px;
+  margin: 0;
   color: var(--muted);
   font-size: 14px;
   font-weight: 800;
@@ -317,22 +321,25 @@ input {
 .metric-card strong {
   display: block;
   color: var(--red);
-  font-size: 34px;
+  font-size: 32px;
   line-height: 1.05;
 }
 
 .metric-card span {
   display: block;
-  margin-top: 14px;
+  margin: 0;
   color: var(--muted);
   font-size: 15px;
+  line-height: 1.62;
 }
 
 .source-chip {
   min-height: 34px;
   display: inline-flex;
   align-items: center;
-  margin-top: 18px;
+  width: max-content;
+  max-width: 100%;
+  margin-top: 14px;
   padding: 6px 10px;
   color: var(--graphite);
   background: var(--paper);
@@ -340,6 +347,14 @@ input {
   border-radius: 6px;
   font-size: 13px;
   font-weight: 850;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.metric-card .source-chip,
+.charging-card .source-chip,
+.affiliate-card .source-chip {
+  margin-top: auto;
 }
 
 .source-chip:hover,
@@ -424,15 +439,15 @@ input {
 
 .charging-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
 .charging-card {
-  min-height: 438px;
-  display: grid;
-  align-content: start;
-  gap: 16px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
   padding: 24px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -471,7 +486,7 @@ input {
 
 .charging-card dl {
   display: grid;
-  gap: 12px;
+  gap: 10px;
   margin: 0;
 }
 
@@ -493,7 +508,7 @@ input {
 
 .adapter-panel {
   display: grid;
-  grid-template-columns: minmax(0, 0.52fr) minmax(520px, 1fr);
+  grid-template-columns: 1fr;
   gap: 24px;
   align-items: start;
   margin-top: 22px;
@@ -510,12 +525,12 @@ input {
 
 .adapter-checklist {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 12px;
 }
 
 .adapter-checklist article {
-  min-height: 196px;
+  min-height: 0;
   padding: 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -547,9 +562,13 @@ input {
 
 .taiwan-charging-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   margin-top: 22px;
+}
+
+.taiwan-charging-grid article:nth-child(odd):last-child {
+  grid-column: 1 / -1;
 }
 
 .taiwan-charging-grid article {
@@ -588,9 +607,9 @@ input {
 
 .affiliate-hero-card {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 24px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: start;
   padding: 28px;
   border: 1px solid var(--line-dark);
   border-radius: 8px;
@@ -626,16 +645,16 @@ input {
 
 .affiliate-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   margin-top: 18px;
 }
 
 .affiliate-card {
-  min-height: 300px;
-  display: grid;
-  align-content: start;
-  gap: 14px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   padding: 24px;
   border: 1px solid var(--line-dark);
   border-radius: 8px;
@@ -675,6 +694,10 @@ input {
 .affiliate-card p,
 .affiliate-card li {
   color: var(--muted-dark);
+}
+
+.affiliate-card p {
+  margin: 0;
 }
 
 .affiliate-card-feature li {
@@ -722,12 +745,15 @@ input {
 
 .answer-strip {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
 .answer-strip article {
-  min-height: 150px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   padding: 20px;
   border: 1px solid var(--line-dark);
   border-radius: 8px;
@@ -743,14 +769,14 @@ input {
 
 .answer-strip strong {
   display: block;
-  margin-top: 8px;
+  margin: 0;
   color: var(--white);
   font-size: 18px;
   line-height: 1.28;
 }
 
 .answer-strip p {
-  margin: 8px 0 0;
+  margin: 0;
   color: var(--muted-dark);
   font-size: 14px;
   line-height: 1.55;
@@ -767,16 +793,20 @@ input {
 
 .faq-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
 .faq-card {
-  min-height: 250px;
+  min-height: 0;
   padding: 24px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
+}
+
+.faq-card:nth-child(odd):last-child {
+  grid-column: 1 / -1;
 }
 
 .faq-band.alt .faq-card {
@@ -793,6 +823,7 @@ input {
 .faq-card p {
   margin: 12px 0 0;
   color: var(--muted);
+  line-height: 1.7;
 }
 
 .accessories-page {
@@ -849,13 +880,13 @@ input {
 
 .connector-gallery {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   margin-top: 28px;
 }
 
 .connector-gallery article {
-  min-height: 360px;
+  min-height: 0;
   padding: 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -980,7 +1011,9 @@ input {
 }
 
 .lens-card {
-  min-height: 430px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
   padding: 34px;
   border: 1px solid var(--line);
   background: var(--paper);
@@ -996,15 +1029,16 @@ input {
 }
 
 .lens-icon {
-  width: 54px;
-  height: 54px;
-  display: inline-grid;
-  place-items: center;
-  margin-bottom: 24px;
+  width: max-content;
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 14px;
+  padding: 6px 10px;
   color: var(--white);
   background: var(--graphite);
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 6px;
+  font-size: 13px;
   font-weight: 850;
 }
 
@@ -1019,7 +1053,7 @@ input {
 }
 
 .lens-card ul {
-  margin: 22px 0 0;
+  margin: 14px 0 0;
   padding-left: 20px;
   color: var(--muted);
 }
@@ -1045,9 +1079,9 @@ input {
 
 .radar-layout {
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1fr);
-  align-items: center;
-  gap: 36px;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 26px;
 }
 
 .mode-switch {
@@ -1102,12 +1136,12 @@ input {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
-  width: min(520px, 100%);
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
 }
 
 .owner-board article {
-  min-height: 170px;
+  min-height: 0;
   padding: 22px;
   border: 1px solid var(--line-dark);
   border-radius: 8px;
@@ -1242,13 +1276,16 @@ input {
 
 .signal-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
-  margin-top: 44px;
+  margin-top: 28px;
 }
 
 .signal-card {
-  min-height: 248px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 26px;
   border: 1px solid var(--line-dark);
   background: rgba(255, 255, 255, 0.05);
@@ -1272,7 +1309,7 @@ input {
 }
 
 .signal-tag {
-  margin: 0 0 16px;
+  margin: 0;
   color: #f0b6b8;
   font-size: 13px;
   font-weight: 850;
@@ -1296,13 +1333,14 @@ input {
 }
 
 .tool-heading {
-  min-height: 86px;
+  min-height: 0;
+  margin-bottom: 16px;
 }
 
 .control-list {
   display: grid;
   gap: 22px;
-  margin-top: 8px;
+  margin-top: 0;
 }
 
 .range-control {
@@ -1453,12 +1491,12 @@ input {
 
 .timeline {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
 .timeline article {
-  min-height: 260px;
+  min-height: 0;
   padding: 26px;
   border: 1px solid var(--line);
   background: var(--paper);
@@ -1486,8 +1524,8 @@ input {
 
 .sources-layout {
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(360px, 1fr);
-  gap: 36px;
+  grid-template-columns: 1fr;
+  gap: 26px;
   align-items: start;
 }
 
@@ -1579,12 +1617,15 @@ input {
 
 .beginner-stats {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
 .beginner-stats article {
-  min-height: 230px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 24px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -1602,7 +1643,7 @@ input {
   width: max-content;
   min-height: 32px;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
   padding: 5px 10px;
   color: var(--white);
   background: var(--red);
@@ -1619,7 +1660,7 @@ input {
 }
 
 .beginner-stats p {
-  margin: 14px 0 0;
+  margin: 0;
   color: var(--muted);
   font-size: 15px;
 }
@@ -1713,13 +1754,13 @@ input {
 .software-grid,
 .manual-list {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
 .guide-grid.compact-grid {
   margin-top: 22px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .guide-card,
@@ -1728,7 +1769,10 @@ input {
 .software-grid article,
 .manual-list article,
 .note-card {
-  min-height: 310px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 24px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -1766,7 +1810,7 @@ input {
 .note-card p,
 .decision-panel p,
 .charging-rules-panel p {
-  margin: 12px 0 0;
+  margin: 0;
   color: var(--muted);
 }
 
@@ -1784,7 +1828,7 @@ input {
 
 .decision-panel {
   display: grid;
-  grid-template-columns: minmax(0, 0.48fr) minmax(520px, 1fr);
+  grid-template-columns: 1fr;
   gap: 24px;
   padding: 26px;
   border: 1px solid var(--line);
@@ -1811,19 +1855,22 @@ input {
 
 .delivery-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.38fr);
+  grid-template-columns: 1fr;
   gap: 18px;
   align-items: start;
 }
 
 .delivery-flow {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
 .delivery-flow article {
-  min-height: 320px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 24px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -1843,12 +1890,12 @@ input {
 
 .first-week-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
 .first-week-grid article {
-  min-height: 220px;
+  min-height: 0;
   padding: 24px;
   border: 1px solid var(--line);
   border-top: 5px solid var(--red);
@@ -1880,28 +1927,27 @@ input {
 
 .charging-school-grid article,
 .service-grid article {
-  display: grid;
-  align-content: start;
+  align-content: initial;
 }
 
 .charging-rules-panel {
-  grid-template-columns: minmax(0, 0.52fr) minmax(520px, 1fr);
+  grid-template-columns: 1fr;
 }
 
 .software-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .software-grid article {
-  min-height: 282px;
+  min-height: 0;
 }
 
 .manual-list {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .manual-list article {
-  min-height: 270px;
+  min-height: 0;
 }
 
 .manual-actions {
@@ -2640,6 +2686,7 @@ input {
 
   .owner-board {
     width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .result-grid {
