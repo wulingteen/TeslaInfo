@@ -39,6 +39,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -1436,14 +1437,16 @@ input {
 .product-card-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: 18px;
 }
 
 .product-card {
   display: grid;
-  grid-template-columns: 190px minmax(0, 1fr);
+  grid-template-columns: 164px minmax(0, 1fr);
+  align-items: start;
   gap: 20px;
-  min-height: 330px;
+  min-height: 0;
   padding: 22px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -1453,9 +1456,11 @@ input {
 
 .product-card img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 164px;
+  max-height: 164px;
+  aspect-ratio: auto;
   object-fit: contain;
-  align-self: start;
+  object-position: center;
   padding: 12px;
   border-radius: 6px;
   background: #f8f8f8;
@@ -1477,10 +1482,6 @@ input {
   margin: 14px 0 16px;
   padding-left: 20px;
   color: var(--muted);
-}
-
-.accessory-products .product-card img {
-  aspect-ratio: 4 / 3;
 }
 
 .accessory-products {
