@@ -153,6 +153,7 @@ input {
 .hero-vehicle-media {
   inset: auto max(28px, 5vw) 44px auto;
   width: min(72vw, 1040px);
+  max-width: none;
   height: auto;
   max-height: 70svh;
   object-fit: contain;
@@ -3244,11 +3245,11 @@ input {
   }
 
   .hero-vehicle-media {
-    inset: auto auto 16px 50%;
-    width: min(132vw, 680px);
+    inset: auto auto 72px 50%;
+    width: min(148vw, 680px);
     max-height: 44svh;
     object-position: center;
-    opacity: 0.48;
+    opacity: 0.58;
     transform: translateX(-50%);
   }
 

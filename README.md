@@ -2,7 +2,7 @@
 
 給台灣特斯拉車主看的用車筆記：把充電規格、轉接頭、耗電、保養、購車推薦碼與長途檢查整理在同一頁。
 
-![2025 Tesla Model Y Juniper](assets/model-y-juniper-hero.webp)
+![Model Y 煥新版 RWD 去背車圖](assets/vehicles/model-y-rwd.png)
 
 ## 這個專案給誰
 
@@ -28,7 +28,7 @@
 
 ### 主視覺
 
-首頁主視覺使用 Wikimedia Commons 上 Alexander-93 拍攝的 2025 Tesla Model Y Juniper Long Range AWD 實拍照片，授權為 CC BY-SA 4.0。前台文案以車主查資料、核對規格和試算成本為主。
+首頁主視覺使用 Wikimedia Commons 上 Ethan Llamas 拍攝的 Model Y Juniper First Edition RWD Ultra Red 圖片，授權為 CC BY-SA 4.0。本站裁切、去背並輸出為固定尺寸透明 PNG。前台文案以車主查資料、核對規格和試算成本為主。
 
 ### 新手全須知
 
@@ -177,8 +177,8 @@ http://127.0.0.1:4174/stock-analysis.html
 .
 ├── assets/
 │   ├── accessories/
-│   ├── model-y-juniper-hero.webp
-│   ├── tesla-owner-hero.jpg
+│   ├── vehicles/
+│   ├── tesla-info-og.jpg
 │   └── musk-empire-hero.png
 ├── accessories.html
 ├── beginner-guide.html
