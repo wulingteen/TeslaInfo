@@ -48,7 +48,7 @@ const modelFitData = {
   "y-juniper": {
     name: "Model Y 煥新版",
     generation: "2025+ / RWD 外觀",
-    hero: "assets/vehicles/model-y-juniper.png",
+    hero: "assets/vehicles/model-y-rwd.png",
     heroAlt: "Model Y 煥新版 RWD 完整車身去背圖",
     heroFit: "vehicle",
     summary: "Type 2 慢充、第三方 CCS2 快充需看車端適配，外觀與後廂配件需看 2025+ 或 Juniper 標示。",
