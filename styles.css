@@ -717,8 +717,15 @@ input {
   margin: 0;
 }
 
+.affiliate-card-feature p,
 .affiliate-card-feature li {
   color: var(--muted);
+}
+
+.affiliate-card-feature code {
+  color: var(--graphite);
+  background: var(--paper);
+  border-color: var(--line);
 }
 
 .affiliate-card ul {
@@ -741,6 +748,12 @@ input {
   color: var(--white);
   background: rgba(255, 255, 255, 0.08);
   border-color: var(--line-dark);
+}
+
+.affiliate-card-feature .source-chip {
+  color: var(--graphite);
+  background: var(--paper);
+  border-color: var(--line);
 }
 
 .affiliate-band .source-chip:hover,
@@ -1259,6 +1272,12 @@ input {
   max-width: 660px;
   color: var(--muted);
   font-size: 19px;
+}
+
+.accessory-hero-band .button.secondary {
+  color: var(--graphite);
+  background: var(--paper);
+  border-color: var(--line);
 }
 
 .accessory-visual-grid {
