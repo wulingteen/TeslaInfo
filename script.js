@@ -1,8 +1,25 @@
 const formatter = new Intl.NumberFormat("zh-TW");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 function formatTwd(value) {
   return `NT$${formatter.format(Math.round(value))}`;
 }
+
+const autoRevealSelectors = [
+  ".answer-strip article",
+  ".metric-card",
+  ".warranty-panel",
+  ".charging-card",
+  ".affiliate-card",
+  ".signal-card",
+  ".tool-card",
+  ".faq-card",
+  ".source-list li"
+];
+
+document
+  .querySelectorAll(autoRevealSelectors.join(", "))
+  .forEach((element) => element.classList.add("motion-reveal"));
 
 const modeButtons = document.querySelectorAll(".mode-button");
 const signalCards = document.querySelectorAll(".signal-card");
@@ -24,7 +41,7 @@ modeButtons.forEach((button) => {
 
 const revealTargets = document.querySelectorAll(".motion-reveal");
 
-if ("IntersectionObserver" in window) {
+if (!prefersReducedMotion.matches && "IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -42,6 +59,74 @@ if ("IntersectionObserver" in window) {
   revealTargets.forEach((target) => revealObserver.observe(target));
 } else {
   revealTargets.forEach((target) => target.classList.add("is-visible"));
+}
+
+const heroSection = document.querySelector(".hero");
+const scrollMotionSections = [
+  document.querySelector(".answer-band"),
+  document.querySelector(".model-match-band"),
+  document.querySelector(".pulse-band"),
+  document.querySelector(".charging-band"),
+  document.querySelector(".tools-band")
+].filter(Boolean);
+let scrollMotionFrame = 0;
+
+function clampMotion(value, min = 0, max = 1) {
+  return Math.min(Math.max(value, min), max);
+}
+
+function smoothMotion(value) {
+  const progress = clampMotion(value);
+  return progress * progress * (3 - 2 * progress);
+}
+
+function updateScrollMotion() {
+  scrollMotionFrame = 0;
+
+  if (prefersReducedMotion.matches) {
+    return;
+  }
+
+  const viewportHeight = window.innerHeight || 1;
+
+  if (heroSection) {
+    const rect = heroSection.getBoundingClientRect();
+    const progress = smoothMotion((-rect.top) / Math.max(rect.height * 0.92, 1));
+    heroSection.style.setProperty("--hero-media-x", `${-42 * progress}px`);
+    heroSection.style.setProperty("--hero-media-y", `${-28 * progress}px`);
+    heroSection.style.setProperty("--hero-media-scale", (1 + progress * 0.045).toFixed(3));
+    heroSection.style.setProperty("--hero-media-opacity", (1 - progress * 0.24).toFixed(3));
+    heroSection.style.setProperty("--hero-copy-y", `${-22 * progress}px`);
+    heroSection.style.setProperty("--hero-copy-opacity", (1 - progress * 0.16).toFixed(3));
+  }
+
+  scrollMotionSections.forEach((section) => {
+    const rect = section.getBoundingClientRect();
+    const raw = (viewportHeight - rect.top) / (viewportHeight + rect.height);
+    const progress = smoothMotion(raw);
+    const stageProgress = smoothMotion((viewportHeight - rect.top) / Math.max(viewportHeight * 0.95, 1));
+    section.style.setProperty("--section-progress", progress.toFixed(3));
+    section.style.setProperty("--stage-y", `${34 * (1 - stageProgress)}px`);
+    section.style.setProperty("--stage-scale", (0.985 + stageProgress * 0.015).toFixed(3));
+    section.style.setProperty("--stage-opacity", (0.78 + stageProgress * 0.22).toFixed(3));
+    section.style.setProperty("--section-glow-y", `${-18 * progress}px`);
+    section.style.setProperty("--vehicle-x", `${26 * (0.5 - progress)}px`);
+    section.style.setProperty("--vehicle-y", `${14 * progress}px`);
+    section.style.setProperty("--vehicle-scale", (1 + progress * 0.014).toFixed(3));
+  });
+}
+
+function requestScrollMotion() {
+  if (!scrollMotionFrame) {
+    scrollMotionFrame = window.requestAnimationFrame(updateScrollMotion);
+  }
+}
+
+if (!prefersReducedMotion.matches) {
+  document.documentElement.classList.add("has-scroll-motion");
+  requestScrollMotion();
+  window.addEventListener("scroll", requestScrollMotion, { passive: true });
+  window.addEventListener("resize", requestScrollMotion);
 }
 
 const modelFitData = {

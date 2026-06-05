@@ -131,6 +131,12 @@ input {
 
 .hero {
   position: relative;
+  --hero-media-x: 0px;
+  --hero-media-y: 0px;
+  --hero-media-scale: 1;
+  --hero-media-opacity: 1;
+  --hero-copy-y: 0px;
+  --hero-copy-opacity: 1;
   min-height: 78svh;
   display: grid;
   align-items: center;
@@ -172,6 +178,20 @@ input {
 
 .hero-content {
   padding: 72px 0 46px;
+}
+
+.has-scroll-motion .hero-content {
+  opacity: var(--hero-copy-opacity);
+  transform: translate3d(0, var(--hero-copy-y), 0);
+  transition: opacity 120ms linear, transform 120ms linear;
+  will-change: transform, opacity;
+}
+
+.has-scroll-motion .hero-vehicle-media {
+  opacity: var(--hero-media-opacity);
+  transform: translate3d(var(--hero-media-x), var(--hero-media-y), 0) scale(var(--hero-media-scale));
+  transition: opacity 120ms linear, transform 120ms linear;
+  will-change: transform, opacity;
 }
 
 .eyebrow {
@@ -916,13 +936,20 @@ input {
 
 .model-match-band {
   position: relative;
-  overflow: hidden;
+  --section-progress: 0;
+  --stage-y: 34px;
+  --stage-scale: 0.985;
+  --stage-opacity: 0.78;
+  --vehicle-x: 0px;
+  --vehicle-y: 0px;
+  --vehicle-scale: 1;
+  overflow: visible;
   color: var(--white);
+  isolation: isolate;
   background:
     linear-gradient(145deg, rgba(73, 111, 143, 0.22), transparent 34%),
     linear-gradient(315deg, rgba(154, 107, 47, 0.16), transparent 38%),
     #0b0d11;
-  contain: layout paint;
 }
 
 .model-match-band::before {
@@ -932,6 +959,8 @@ input {
   pointer-events: none;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 18%);
   opacity: 0.9;
+  transform: translate3d(0, var(--section-glow-y, 0px), 0);
+  transition: transform 120ms linear;
 }
 
 .model-match-layout {
@@ -1017,6 +1046,18 @@ input {
   gap: 14px;
 }
 
+.has-scroll-motion .model-fit-stage {
+  will-change: auto;
+}
+
+.has-scroll-motion .model-hero-frame {
+  opacity: var(--stage-opacity);
+  transform: translate3d(0, var(--stage-y), 0) scale(var(--stage-scale));
+  transform-origin: center top;
+  transition: opacity 120ms linear, transform 120ms linear;
+  will-change: transform, opacity;
+}
+
 .model-hero-frame {
   position: relative;
   display: grid;
@@ -1065,7 +1106,7 @@ input {
   padding: 44px 32px 116px;
   background: transparent;
   filter: drop-shadow(0 22px 24px rgba(17, 17, 19, 0.26));
-  transform: scale(1);
+  transform: translate3d(var(--vehicle-x), var(--vehicle-y), 0) scale(var(--vehicle-scale));
 }
 
 .model-fit-stage.is-switching .model-hero-frame img {
@@ -1240,15 +1281,63 @@ input {
   border-color: var(--red);
 }
 
+@media (min-width: 981px) {
+  .model-match-band {
+    min-height: 118svh;
+    padding: 92px 0;
+  }
+
+  .model-fit-stage {
+    position: relative;
+  }
+
+  .model-hero-frame {
+    position: sticky;
+    top: 92px;
+    z-index: 2;
+  }
+
+  .fit-visuals {
+    margin-top: 36px;
+  }
+}
+
 .motion-reveal {
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 560ms ease, transform 560ms ease;
+  filter: blur(8px);
+  transform: translate3d(0, 34px, 0) scale(0.985);
+  transition:
+    opacity 760ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 760ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 760ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, filter, transform;
 }
 
 .motion-reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  filter: blur(0);
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.answer-strip article:nth-child(2),
+.metric-card:nth-child(2),
+.charging-card:nth-child(2),
+.source-list li:nth-child(2) {
+  transition-delay: 70ms;
+}
+
+.answer-strip article:nth-child(3),
+.metric-card:nth-child(3),
+.charging-card:nth-child(3),
+.source-list li:nth-child(3) {
+  transition-delay: 140ms;
+}
+
+.answer-strip article:nth-child(4),
+.metric-card:nth-child(4),
+.charging-card:nth-child(4),
+.source-list li:nth-child(4) {
+  transition-delay: 210ms;
 }
 
 @keyframes fitVisualIn {
@@ -3146,6 +3235,7 @@ input {
   .motion-reveal,
   .fit-visual {
     opacity: 1 !important;
+    filter: none !important;
     transform: none !important;
   }
 }
@@ -3251,6 +3341,11 @@ input {
     object-position: center;
     opacity: 0.58;
     transform: translateX(-50%);
+  }
+
+  .has-scroll-motion .hero-vehicle-media {
+    opacity: var(--hero-media-opacity);
+    transform: translateX(-50%) translate3d(var(--hero-media-x), var(--hero-media-y), 0) scale(var(--hero-media-scale));
   }
 
   .hero-shade {
