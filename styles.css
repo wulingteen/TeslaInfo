@@ -1423,6 +1423,36 @@ input {
   aspect-ratio: 4 / 3;
 }
 
+.accessory-products {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.accessory-products .product-card {
+  grid-template-columns: 1fr;
+  gap: 16px;
+  min-height: 0;
+  padding: 18px;
+}
+
+.accessory-products .product-card img {
+  width: 100%;
+  height: 172px;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+  padding: 14px;
+}
+
+.accessory-products .product-card h3 {
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.accessory-products .product-card p {
+  font-size: 16px;
+  line-height: 1.55;
+}
+
 .split-band {
   background: var(--white);
 }
