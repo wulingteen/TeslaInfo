@@ -782,6 +782,44 @@ input {
   line-height: 1.55;
 }
 
+.answer-points {
+  display: grid;
+  gap: 7px;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.answer-points li {
+  position: relative;
+  padding-left: 15px;
+  color: var(--muted-dark);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.answer-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.answer-band .source-chip {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--line-dark);
+}
+
+.answer-band .source-chip:hover,
+.answer-band .source-chip:focus-visible {
+  border-color: var(--red);
+}
+
 .faq-band {
   padding: 76px 0;
   background: var(--white);
