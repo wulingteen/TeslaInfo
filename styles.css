@@ -2051,10 +2051,6 @@ input {
   background: var(--paper);
 }
 
-.beginner-mark {
-  background: var(--graphite);
-}
-
 .beginner-hero .hero-media {
   object-position: 64% center;
 }
@@ -2424,10 +2420,6 @@ input {
   background: #efede6;
 }
 
-.empire-mark {
-  background: linear-gradient(135deg, var(--red), var(--gold));
-}
-
 .empire-hero .hero-media {
   object-position: center center;
 }
@@ -2779,10 +2771,6 @@ input {
 
 .stock-page {
   background: #f1efe8;
-}
-
-.stock-mark {
-  background: linear-gradient(135deg, var(--green), var(--cyan));
 }
 
 .stock-hero .hero-media {
