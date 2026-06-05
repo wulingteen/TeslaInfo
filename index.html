@@ -62,7 +62,7 @@
               "width": 1200,
               "height": 630
             },
-            "dateModified": "2026-06-04",
+            "dateModified": "2026-06-05",
             "inLanguage": "zh-Hant"
           },
           {
@@ -121,6 +121,7 @@
       <nav class="site-nav" aria-label="頁面章節">
         <a href="beginner-guide.html">新手全須知</a>
         <a href="#dashboard">常用數字</a>
+        <a href="#model-match">車型配對</a>
         <a href="#charging-basics">充電標準</a>
         <a href="accessories.html">配件圖鑑</a>
         <a href="#radar">檢查清單</a>
@@ -214,6 +215,100 @@
               </ul>
               <a class="source-chip" href="#dashboard">看用車數字</a>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="model-match-band" id="model-match" aria-labelledby="model-match-title">
+        <div class="container model-match-layout">
+          <div class="model-match-copy motion-reveal">
+            <p class="eyebrow dark">車型配對</p>
+            <h2 id="model-match-title">車型、充電頭、配件一次對上</h2>
+            <p>
+              先選車型世代，再看慢充、快充、交車後先買項目與容易買錯的配件。年份先當索引，最後仍以車端充電孔、Tesla 帳戶產品適配與車主手冊核對。
+            </p>
+            <div class="model-tabs" role="tablist" aria-label="選擇 Tesla 車型世代">
+              <button class="model-button is-active" type="button" data-model="y-juniper" role="tab" aria-selected="true">
+                <span>Model Y 煥新版</span>
+                <small>2025+ / Juniper</small>
+              </button>
+              <button class="model-button" type="button" data-model="y-legacy" role="tab" aria-selected="false">
+                <span>Model Y</span>
+                <small>2021-2024</small>
+              </button>
+              <button class="model-button" type="button" data-model="model3-highland" role="tab" aria-selected="false">
+                <span>Model 3</span>
+                <small>2024+ / Highland</small>
+              </button>
+              <button class="model-button" type="button" data-model="tpc-early" role="tab" aria-selected="false">
+                <span>早期 S / 3 / X</span>
+                <small>2021-08-01 前</small>
+              </button>
+            </div>
+          </div>
+
+          <div class="model-fit-stage motion-reveal" aria-live="polite">
+            <div class="model-hero-frame">
+              <img
+                id="modelHeroImage"
+                src="assets/model-y-juniper-hero.webp"
+                alt="Model Y 煥新版車側照片"
+                width="2200"
+                height="1238"
+                decoding="async"
+              >
+              <div class="model-hero-caption">
+                <span id="modelGeneration">2025+ / Juniper</span>
+                <strong id="modelName">Model Y 煥新版</strong>
+                <p id="modelSummary">Type 2 慢充、第三方快充以車端 CCS2 或適配狀態判斷，配件需看 2025+ 標示。</p>
+              </div>
+            </div>
+
+            <div class="fit-visuals" aria-label="車型對應充電頭與配件圖片">
+              <figure class="fit-visual">
+                <img id="fitImage0" src="assets/accessories/type2-wall-connector.webp" alt="Type 2 壁掛式充電座" width="1200" height="1200" decoding="async">
+                <figcaption><span id="fitTag0">慢充</span><strong id="fitTitle0">Type 2 壁掛座</strong></figcaption>
+              </figure>
+              <figure class="fit-visual">
+                <img id="fitImage1" src="assets/accessories/ccs2-adapter.webp" alt="CCS2 轉接頭" width="1200" height="1200" decoding="async">
+                <figcaption><span id="fitTag1">快充</span><strong id="fitTitle1">CCS2 快充</strong></figcaption>
+              </figure>
+              <figure class="fit-visual">
+                <img id="fitImage2" src="assets/accessories/trunk-liner.webp" alt="Model Y 後廂墊與收納組" width="1400" height="933" decoding="async">
+                <figcaption><span id="fitTag2">配件</span><strong id="fitTitle2">2025+ 後廂墊</strong></figcaption>
+              </figure>
+              <figure class="fit-visual">
+                <img id="fitImage3" src="assets/accessories/screen-protector.webp" alt="中控螢幕保護貼" width="1200" height="800" decoding="async">
+                <figcaption><span id="fitTag3">防護</span><strong id="fitTitle3">螢幕保護貼</strong></figcaption>
+              </figure>
+            </div>
+
+            <div class="model-fit-panel">
+              <dl class="model-fit-list">
+                <div>
+                  <dt>慢充</dt>
+                  <dd id="modelSlow">Type 2 壁掛式充電座，家充、公司車位、目的地充電先看電容量與槍頭。</dd>
+                </div>
+                <div>
+                  <dt>快充</dt>
+                  <dd id="modelFast">第三方快充先看 CCS2 規格、站點功率、付款 App 與車端適配。</dd>
+                </div>
+                <div>
+                  <dt>先買</dt>
+                  <dd id="modelStarter">Type 2 壁掛座、螢幕保護貼、補胎打氣組、2025+ 後廂墊。</dd>
+                </div>
+                <div>
+                  <dt>避開</dt>
+                  <dd id="modelAvoid">後廂墊、遮陽、收納和椅背墊需看 2025+ 或 Juniper 標示。</dd>
+                </div>
+              </dl>
+              <div class="model-source-row">
+                <a class="source-chip" id="modelPrimaryLink" href="accessories.html#owner-accessories">看完整配件清單</a>
+                <a class="source-chip" href="https://shop.tesla.com/zh_tw/product/type-2-wall-connector" target="_blank" rel="noopener noreferrer">Tesla Type 2 來源</a>
+                <a class="source-chip" href="https://shop.tesla.com/zh_tw/product/ccs-combo-2-adapter" target="_blank" rel="noopener noreferrer">Tesla CCS2 來源</a>
+                <a class="source-chip" href="https://shop.tesla.com/zh_tw/product/sae-j1772-adapter" target="_blank" rel="noopener noreferrer">Tesla J1772 來源</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
