@@ -2,7 +2,7 @@
 
 給台灣特斯拉車主看的用車筆記：把充電規格、轉接頭、耗電、保養、購車推薦碼與長途檢查整理在同一頁。
 
-![Model Y 煥新版 RWD 去背車圖](assets/vehicles/model-y-rwd.png)
+![Tesla 車主筆記主視覺](assets/model-y-juniper-hero.webp)
 
 ## 這個專案給誰
 
@@ -28,7 +28,7 @@
 
 ### 主視覺
 
-首頁主視覺使用 Wikimedia Commons 上 Ethan Llamas 拍攝的 Model Y Juniper First Edition RWD Ultra Red 圖片，授權為 CC BY-SA 4.0。本站裁切、去背並輸出為固定尺寸透明 PNG。前台文案以車主查資料、核對規格和試算成本為主。
+首頁和車型配對使用原本那組車型視覺資產。前台文案以車主查資料、核對規格和試算成本為主。
 
 ### 新手全須知
 

@@ -133,7 +133,7 @@ const modelFitData = {
   "y-juniper": {
     name: "Model Y 煥新版",
     generation: "2025+ / RWD 外觀",
-    hero: "assets/vehicles/model-y-rwd.png?v=20260605-license",
+    hero: "assets/vehicles/model-y-rwd.png?v=20260605-original",
     heroAlt: "Model Y 煥新版 RWD 完整車身去背圖",
     heroFit: "vehicle",
     summary: "2025+ Model Y 煥新版配件看 Juniper 或 2025+ 標示；慢充用 Type 2，第三方快充看 CCS2 車端適配。",
@@ -153,7 +153,7 @@ const modelFitData = {
   "y-legacy": {
     name: "Model Y",
     generation: "2021-2024",
-    hero: "assets/vehicles/model-y-legacy.png?v=20260605-license",
+    hero: "assets/vehicles/model-y-legacy.png?v=20260605-original",
     heroAlt: "2021-2024 Model Y 完整車身去背圖",
     heroFit: "vehicle",
     summary: "2021-2024 Model Y 不套用煥新版後廂、遮陽和收納尺寸；充電孔仍需實車核對。",
@@ -173,7 +173,7 @@ const modelFitData = {
   "model3-highland": {
     name: "Model 3",
     generation: "2024+ / Highland",
-    hero: "assets/vehicles/model-3-highland.png?v=20260605-license",
+    hero: "assets/vehicles/model-3-highland.png?v=20260605-original",
     heroAlt: "Model 3 Highland 完整車身去背圖",
     heroFit: "vehicle",
     summary: "Model 3 Highland 內裝周邊、腳踏墊、遮陽和收納需看 2024+ 標示；家充看 Type 2。",
@@ -193,7 +193,7 @@ const modelFitData = {
   "tpc-early": {
     name: "早期 Model S / 3 / X",
     generation: "2021-08-01 前交付",
-    hero: "assets/vehicles/model-3-tpc-legacy.png?v=20260605-license",
+    hero: "assets/vehicles/model-3-tpc-legacy.png?v=20260605-original",
     heroAlt: "早期 Tesla TPC 車端參考車完整去背圖",
     heroFit: "vehicle",
     summary: "2021-08-01 前交付車先看充電孔。TPC 車可能需要 J1772 慢充轉接器或 CCS2 快充轉接頭。",
