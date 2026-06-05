@@ -47,9 +47,9 @@ if ("IntersectionObserver" in window) {
 const modelFitData = {
   "y-juniper": {
     name: "Model Y 煥新版",
-    generation: "2025+ / Juniper",
+    generation: "2025+ / RWD 外觀",
     hero: "assets/vehicles/model-y-juniper.png",
-    heroAlt: "Model Y 煥新版完整車身去背圖",
+    heroAlt: "Model Y 煥新版 RWD 完整車身去背圖",
     heroFit: "vehicle",
     summary: "Type 2 慢充、第三方 CCS2 快充需看車端適配，外觀與後廂配件需看 2025+ 或 Juniper 標示。",
     slow: "Type 2 壁掛式充電座，家充、公司車位、目的地充電先看電容量與槍頭。",
