@@ -48,9 +48,9 @@ const modelFitData = {
   "y-juniper": {
     name: "Model Y 煥新版",
     generation: "2025+ / Juniper",
-    hero: "assets/model-y-juniper-hero.webp",
-    heroAlt: "Model Y 煥新版車側照片",
-    heroFit: "cover",
+    hero: "assets/vehicles/model-y-juniper.png",
+    heroAlt: "Model Y 煥新版完整車身去背圖",
+    heroFit: "vehicle",
     summary: "Type 2 慢充、第三方 CCS2 快充需看車端適配，外觀與後廂配件需看 2025+ 或 Juniper 標示。",
     slow: "Type 2 壁掛式充電座，家充、公司車位、目的地充電先看電容量與槍頭。",
     fast: "第三方 CCS2 快充先分車端可直接插槍或需轉接；有轉接需求時，用 Tesla 帳戶確認產品適配。",
@@ -68,9 +68,9 @@ const modelFitData = {
   "y-legacy": {
     name: "Model Y",
     generation: "2021-2024",
-    hero: "assets/model-y-juniper-hero.webp",
-    heroAlt: "Model Y 車型配件核對示意",
-    heroFit: "cover",
+    hero: "assets/vehicles/model-y-legacy.png",
+    heroAlt: "2021-2024 Model Y 完整車身去背圖",
+    heroFit: "vehicle",
     summary: "Type 2 慢充是主要家充方向，配件需看 2021-2024 標示，避免直接套用煥新版尺寸。",
     slow: "Tesla Type 2 壁掛座官方備註寫明，Type 2 充電規格適用於 2021.08.01 後交付之新車。",
     fast: "第三方快充先核對 CCS2 槍頭、付款 App、站點功率與車端適配。",
@@ -88,9 +88,9 @@ const modelFitData = {
   "model3-highland": {
     name: "Model 3",
     generation: "2024+ / Highland",
-    hero: "assets/tesla-owner-hero.jpg",
-    heroAlt: "Model 3 在超級充電站補電",
-    heroFit: "cover",
+    hero: "assets/vehicles/model-3-highland.png",
+    heroAlt: "Model 3 Highland 完整車身去背圖",
+    heroFit: "vehicle",
     summary: "家充先看 Type 2，公共慢充與第三方快充分開判斷，內裝配件需看 Highland 或 2024+ 標示。",
     slow: "Type 2 慢充用於家充、目的地充電、公司車位；安裝前先看電容量、管委會和施工條件。",
     fast: "第三方 CCS2 快充需看車端適配、站點功率、付款 App 與停車費。",
@@ -108,9 +108,9 @@ const modelFitData = {
   "tpc-early": {
     name: "早期 Model S / 3 / X",
     generation: "2021-08-01 前交付",
-    hero: "assets/accessories/ccs2-adapter.webp",
-    heroAlt: "CCS2 轉接頭與早期車快充配對圖",
-    heroFit: "contain",
+    hero: "assets/vehicles/model-3-tpc-legacy.png",
+    heroAlt: "早期 Tesla TPC 車端參考車完整去背圖",
+    heroFit: "vehicle",
     summary: "先看車端 TPC 規格，再分開判斷 J1772 慢充與 CCS2 快充轉接需求。",
     slow: "TPC 車主使用第三方 J1772 慢充站時，需看 J1772 轉接器；Tesla 台灣標示最高 19.2 kW。",
     fast: "CCS2 轉接頭官方列出適用區間：2013-09 至 2020-11 Model S、2019-04 至 2021-06-30 Model 3、2017-03 至 2020-11 Model X。",
@@ -129,6 +129,7 @@ const modelFitData = {
 
 const modelButtons = document.querySelectorAll(".model-button");
 const modelStage = document.querySelector(".model-fit-stage");
+const modelHeroFrame = document.querySelector(".model-hero-frame");
 const modelHeroImage = document.querySelector("#modelHeroImage");
 const modelName = document.querySelector("#modelName");
 const modelGeneration = document.querySelector("#modelGeneration");
@@ -159,6 +160,7 @@ function applyModelFit(modelKey) {
     modelHeroImage.src = model.hero;
     modelHeroImage.alt = model.heroAlt;
     modelHeroImage.dataset.fit = model.heroFit;
+    modelHeroFrame.dataset.fit = model.heroFit;
     modelName.textContent = model.name;
     modelGeneration.textContent = model.generation;
     modelSummary.textContent = model.summary;
