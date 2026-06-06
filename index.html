@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="台灣 Tesla 車主筆記，整理充電規格、轉接頭、耗電、保養、購車推薦碼與一年用車成本。"
+      content="台灣 Tesla 車主決策筆記，先選車型與交付年份，再核對充電規格、轉接頭、配件、保固與一年用車成本。"
     >
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="Tesla 車主筆記">
@@ -17,7 +17,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Tesla 車主筆記">
     <meta property="og:title" content="Tesla 車主筆記 | 台灣充電、耗電與保養">
-    <meta property="og:description" content="Tesla 車主速查：充電接頭、家充快充、耗電基準、保養保固、輪胎與年度成本試算。">
+    <meta property="og:description" content="台灣 Tesla 車主用車決策台：車型年份、充電接頭、家充快充、配件、保養保固與年度成本試算。">
     <meta property="og:url" content="https://wulingteen.github.io/TeslaInfo/">
     <meta property="og:image" content="https://wulingteen.github.io/TeslaInfo/assets/tesla-info-og.jpg">
     <meta property="og:image:width" content="1200">
@@ -25,7 +25,7 @@
     <meta property="og:image:alt" content="Tesla 車主筆記首頁圖">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tesla 車主筆記 | 台灣充電、耗電與保養">
-    <meta name="twitter:description" content="Tesla 車主速查：充電接頭、家充快充、耗電基準、保養保固、輪胎與年度成本試算。">
+    <meta name="twitter:description" content="台灣 Tesla 車主用車決策台：車型年份、充電接頭、家充快充、配件、保養保固與年度成本試算。">
     <meta name="twitter:image" content="https://wulingteen.github.io/TeslaInfo/assets/tesla-info-og.jpg">
     <script type="application/ld+json">
       {
@@ -52,7 +52,7 @@
             "@id": "https://wulingteen.github.io/TeslaInfo/#webpage",
             "url": "https://wulingteen.github.io/TeslaInfo/",
             "name": "Tesla 車主筆記 | 台灣充電、耗電與保養",
-            "description": "台灣 Tesla 車主筆記，整理充電規格、轉接頭、耗電、保養、購車推薦碼與一年用車成本。",
+            "description": "台灣 Tesla 車主決策筆記，先選車型與交付年份，再核對充電規格、轉接頭、配件、保固與一年用車成本。",
             "isPartOf": {
               "@id": "https://wulingteen.github.io/TeslaInfo/#website"
             },
@@ -62,7 +62,7 @@
               "width": 1200,
               "height": 630
             },
-            "dateModified": "2026-06-05",
+            "dateModified": "2026-06-06",
             "inLanguage": "zh-Hant"
           },
           {
@@ -110,7 +110,7 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="styles.css?v=20260605-cinematic">
+    <link rel="stylesheet" href="styles.css?v=20260606-singlepage">
   </head>
   <body>
     <header class="site-header" aria-label="主要導覽">
@@ -118,18 +118,16 @@
         <span class="brand-mark" aria-hidden="true">T</span>
         <span>Tesla 車主筆記</span>
       </a>
-      <nav class="site-nav" aria-label="全站導覽">
-        <a href="index.html">首頁</a>
-        <a href="beginner-guide.html">新手全須知</a>
-        <a href="index.html#dashboard">常用數字</a>
-        <a href="index.html#model-match">車型配對</a>
-        <a href="index.html#charging-basics">充電標準</a>
-        <a href="accessories.html">配件圖鑑</a>
-        <a href="index.html#radar">檢查清單</a>
-        <a href="index.html#warranty">保固</a>
-        <a href="index.html#tools">成本試算</a>
-        <a href="index.html#sources">資料來源</a>
-        <a href="stock-analysis.html">股價</a>
+      <nav class="site-nav" aria-label="單頁導覽">
+        <a href="#model-match">車型接頭</a>
+        <a href="#owner-setup">新手流程</a>
+        <a href="#charging-basics">充電標準</a>
+        <a href="#accessory-guide">配件導購</a>
+        <a href="#warranty">保固</a>
+        <a href="#tools">成本</a>
+        <a href="#radar">檢查表</a>
+        <a href="#market-appendix">股價附錄</a>
+        <a href="#sources">來源</a>
       </nav>
     </header>
 
@@ -145,78 +143,64 @@
         >
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="container hero-content">
-          <p class="eyebrow">台灣車主筆記</p>
+          <p class="eyebrow">台灣 Tesla 用車決策</p>
           <h1>Tesla 車主筆記</h1>
           <p class="hero-copy">
-            Type 2 慢充、CCS2 快充、TPC 舊車、輪胎每 10,000 公里、基本保固 4 年或 80,000 公里，Model 3 / Y 電池與驅動單元依車型看 8 年與里程上限。
+            先選車型與交付年份，再核對充電孔、轉接頭、配件、保固與一年成本。Type 2、CCS2、TPC、家充比例和輪胎耗材放在同一條車主動線。
           </p>
           <div class="hero-actions" aria-label="快速前往">
-            <a class="button primary" href="#warranty">看保固</a>
-            <a class="button secondary" href="accessories.html">看配件與接頭</a>
-            <a class="button secondary" href="beginner-guide.html">看交車清單</a>
+            <a class="button primary" href="#model-match">核對車端規格</a>
+            <a class="button secondary" href="#tools">算一年成本</a>
+            <a class="button secondary" href="#owner-setup">看交車流程</a>
           </div>
-          <dl class="hero-facts" aria-label="車主速查分類">
-            <div>
-              <dt>充電</dt>
-              <dd>Type 2、CCS2、TPC</dd>
-            </div>
-            <div>
-              <dt>保養</dt>
-              <dd>濾網、輪胎、煞車油</dd>
-            </div>
-            <div>
-              <dt>保固</dt>
-              <dd>4 年 / 80,000 公里</dd>
-            </div>
-            <div>
-              <dt>成本</dt>
-              <dd>電費、輪胎、保險</dd>
-            </div>
-          </dl>
         </div>
       </section>
 
       <section class="answer-band" aria-labelledby="home-answer-title">
         <div class="container">
-          <h2 class="sr-only" id="home-answer-title">Tesla 車主速查</h2>
+          <div class="answer-heading">
+            <p class="eyebrow">車主決策台</p>
+            <h2 id="home-answer-title">先完成 4 個判斷，再看細節</h2>
+            <p>台灣 Tesla 車主最常卡在車端規格、固定補電、配件年份與保固成本。首頁把這四件事排成可執行順序。</p>
+          </div>
           <div class="answer-strip">
             <article>
-              <span>車端規格</span>
-              <strong>先分 Type 2、CCS2、TPC</strong>
-              <p>慢充看 Type 2 或 TPC，第三方快充看 CCS2。舊車、二手車先看充電孔和交付日期。</p>
+              <span>選車況</span>
+              <strong>交付年份比車名更關鍵</strong>
+              <p>同樣是 Model 3 或 Model Y，年份會影響充電孔、轉接頭與配件標示。二手車先核對交付日期和車端規格。</p>
               <ul class="answer-points">
-                <li>2021-08-01 前交付車常見 TPC 判斷點。</li>
-                <li>CCS2 轉接頭標示最高 250 kW，官方註明不適用慢充。</li>
+                <li>2021-08-01 前交付車優先確認 TPC。</li>
+                <li>2024+ Model 3 與 2025+ Model Y 配件需看新版標示。</li>
               </ul>
-              <a class="source-chip" href="accessories.html#connector-specs">看接頭規格</a>
+              <a class="source-chip" href="#model-match">打開車型配對</a>
             </article>
             <article>
-              <span>日常補電</span>
-              <strong>家充比例決定成本</strong>
+              <span>查接頭</span>
+              <strong>慢充、快充、轉接頭分開判斷</strong>
+              <p>Type 2 多用於 AC 慢充，CCS2 用於 DC 快充，TPC 常見於早期台灣 Tesla。轉接頭不能只看插得進去。</p>
+              <ul class="answer-points">
+                <li>CCS2 轉接頭官方標示不適用慢充。</li>
+                <li>第三方站點需看槍頭、付款 App、停車費與站點功率。</li>
+              </ul>
+              <a class="source-chip" href="#connector-specs">看接頭規格</a>
+            </article>
+            <article>
+              <span>算成本</span>
+              <strong>家充比例決定日常花費</strong>
               <p>有固定車位先估家充比例；無家充先列每週固定可用站點，再把停車費和等待時間放進成本。</p>
               <ul class="answer-points">
-                <li>預設家充單價用台電夏月離峰 NT$2.06/kWh。</li>
-                <li>外部快充單價以 Tesla App 或站點 App 當日價格覆蓋。</li>
+                <li>年里程、家充比例、快充單價會改變年度電費。</li>
+                <li>輪胎、濾網、保險和停車費要放進同一張表。</li>
               </ul>
               <a class="source-chip" href="#tools">打開成本試算</a>
             </article>
             <article>
-              <span>輪胎保養</span>
-              <strong>每 10,000 公里看一次</strong>
-              <p>胎壓、胎面、定位和換位週期會影響耗電、噪音與年度花費。</p>
+              <span>保養保固</span>
+              <strong>保固日期與耗材週期分開記</strong>
+              <p>交車後先保存 App 內保固頁。輪胎、濾網、煞車油和保險成本，會比傳統燃油保養更常影響年度預算。</p>
               <ul class="answer-points">
+                <li>基本車輛保固 4 年或 80,000 公里。</li>
                 <li>Model 3 / Y 輪胎每 10,000 公里或胎紋差大於 1.5 mm 時換位。</li>
-                <li>車廂濾網每 2 年，煞車油每 4 年檢測一次。</li>
-              </ul>
-              <a class="source-chip" href="beginner-guide.html#maintenance-warranty">看保養週期</a>
-            </article>
-            <article>
-              <span>保固日期</span>
-              <strong>基本保固 4 年或 80,000 公里</strong>
-              <p>買中古車或保固快到期前，基本保固、電池保固、驅動單元保固要分開核對。</p>
-              <ul class="answer-points">
-                <li>Model Y RWD 電池保固 8 年或 160,000 公里。</li>
-                <li>Model Y LR / Performance AWD 為 8 年或 192,000 公里，容量下限 70%。</li>
               </ul>
               <a class="source-chip" href="#warranty">看保固速查</a>
             </article>
@@ -225,96 +209,169 @@
       </section>
 
       <section class="model-match-band" id="model-match" aria-labelledby="model-match-title">
-        <div class="container model-match-layout">
+        <div class="container">
           <div class="model-match-copy motion-reveal">
-            <p class="eyebrow dark">車型配對</p>
-            <h2 id="model-match-title">車型、充電頭、配件一次對上</h2>
+            <p class="eyebrow dark">車型接頭</p>
+            <h2 id="model-match-title">車況、接頭、配件一次展開</h2>
             <p>
-              按 2025+、2021-2024、2024+ Model 3、2021-08-01 前 TPC 分組。每組列慢充、快充、先買配件、避開項目。
+              先用交付年份和充電孔分組，再看慢充、快充、配件年份。二手車以實車充電孔、App 保固頁與車主手冊為準。
             </p>
-            <div class="model-tabs" role="tablist" aria-label="選擇 Tesla 車型世代">
-              <button class="model-button is-active" type="button" data-model="y-juniper" role="tab" aria-selected="true">
-                <span>Model Y 煥新版</span>
-                <small>2025+ / RWD 外觀</small>
-              </button>
-              <button class="model-button" type="button" data-model="y-legacy" role="tab" aria-selected="false">
-                <span>Model Y</span>
-                <small>2021-2024</small>
-              </button>
-              <button class="model-button" type="button" data-model="model3-highland" role="tab" aria-selected="false">
-                <span>Model 3</span>
-                <small>2024+ / Highland</small>
-              </button>
-              <button class="model-button" type="button" data-model="tpc-early" role="tab" aria-selected="false">
-                <span>早期 S / 3 / X</span>
-                <small>2021-08-01 前</small>
-              </button>
-            </div>
           </div>
 
-          <div class="model-fit-stage is-visible" aria-live="polite">
-            <div class="model-hero-frame" data-fit="vehicle">
-              <img
-                id="modelHeroImage"
-                src="assets/vehicles/model-y-rwd.png?v=20260605-original"
-                alt="Model Y 煥新版 RWD 完整車身去背圖"
-                width="1050"
-                height="390"
-                data-fit="vehicle"
-                decoding="async"
-              >
-              <div class="model-hero-caption">
-                <span id="modelGeneration">2025+ / RWD 外觀</span>
-                <strong id="modelName">Model Y 煥新版</strong>
-                <p id="modelSummary">Type 2 慢充、第三方快充以車端 CCS2 或適配狀態判斷，配件需看 2025+ 標示。</p>
-              </div>
-            </div>
+          <div class="vehicle-strip" aria-label="車型外觀對照">
+            <article>
+              <img src="assets/vehicles/model-y-rwd.png?v=20260605-original" alt="Model Y 煥新版 RWD 完整車身去背圖" width="1050" height="390" decoding="async">
+              <span>Model Y 煥新版</span>
+              <strong>2025+ / RWD 外觀</strong>
+            </article>
+            <article>
+              <img src="assets/vehicles/model-y-legacy.png?v=20260605-original" alt="2021-2024 Model Y 完整車身去背圖" width="1180" height="664" decoding="async">
+              <span>Model Y</span>
+              <strong>2021-2024</strong>
+            </article>
+            <article>
+              <img src="assets/vehicles/model-3-highland.png?v=20260605-original" alt="Model 3 Highland 完整車身去背圖" width="1540" height="552" decoding="async">
+              <span>Model 3</span>
+              <strong>2024+ / Highland</strong>
+            </article>
+            <article>
+              <img src="assets/vehicles/model-3-tpc-legacy.png?v=20260605-original" alt="早期 Tesla TPC 車端參考車完整去背圖" width="1180" height="664" decoding="async">
+              <span>早期 S / 3 / X</span>
+              <strong>2021-08-01 前</strong>
+            </article>
+          </div>
 
-            <div class="fit-visuals" aria-label="車型對應充電頭與配件圖片">
-              <figure class="fit-visual">
-                <img id="fitImage0" src="assets/accessories/type2-wall-connector.webp" alt="Type 2 壁掛式充電座" width="1200" height="1200" decoding="async">
-                <figcaption><span id="fitTag0">慢充</span><strong id="fitTitle0">Type 2 壁掛座</strong></figcaption>
-              </figure>
-              <figure class="fit-visual">
-                <img id="fitImage1" src="assets/accessories/ccs2-adapter.webp" alt="CCS2 轉接頭" width="1200" height="1200" decoding="async">
-                <figcaption><span id="fitTag1">快充</span><strong id="fitTitle1">CCS2 快充</strong></figcaption>
-              </figure>
-              <figure class="fit-visual">
-                <img id="fitImage2" src="assets/accessories/trunk-liner.webp" alt="Model Y 後廂墊與收納組" width="1400" height="933" decoding="async">
-                <figcaption><span id="fitTag2">配件</span><strong id="fitTitle2">2025+ 後廂墊</strong></figcaption>
-              </figure>
-              <figure class="fit-visual">
-                <img id="fitImage3" src="assets/accessories/screen-protector.webp" alt="中控螢幕保護貼" width="1200" height="800" decoding="async">
-                <figcaption><span id="fitTag3">防護</span><strong id="fitTitle3">螢幕保護貼</strong></figcaption>
-              </figure>
-            </div>
+          <div class="dense-table-wrap model-matrix-wrap" tabindex="0" aria-label="車型接頭與配件對照表">
+            <table class="dense-table model-matrix">
+              <thead>
+                <tr>
+                  <th scope="col">車況</th>
+                  <th scope="col">慢充</th>
+                  <th scope="col">快充</th>
+                  <th scope="col">先買</th>
+                  <th scope="col">避開</th>
+                  <th scope="col">來源</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Model Y 煥新版，2025+</th>
+                  <td>Type 2 壁掛座；先確認社區電容量、管委會、施工報價。</td>
+                  <td>第三方快充看 CCS2 車端適配、站點功率、付款 App。</td>
+                  <td>螢幕保護貼、補胎打氣組、2025+ 後廂墊、線材收納。</td>
+                  <td>標示 2021-2024 的後廂墊、遮陽、收納和椅背墊。</td>
+                  <td><a href="https://shop.tesla.com/zh_tw/product/type-2-wall-connector">Type 2</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">Model Y，2021-2024</th>
+                  <td>Type 2 慢充；Tesla 台灣備註 Type 2 適用於 2021-08-01 後交付新車。</td>
+                  <td>第三方 CCS2 快充需看槍頭、價格、停車費和車端適配。</td>
+                  <td>Type 2 壁掛座、旅充備援、2021-2024 後廂墊、補胎工具。</td>
+                  <td>2025+ Juniper 專用後廂、遮陽、前廂與椅背配件。</td>
+                  <td><a href="https://shop.tesla.com/zh_tw/category/charging">充電產品</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">Model 3 Highland，2024+</th>
+                  <td>Type 2 家充、目的地充電、公司車位慢充。</td>
+                  <td>第三方 CCS2 快充看車端適配、電池溫度、站點功率和付款方式。</td>
+                  <td>螢幕保護貼、胎壓工具、補胎打氣組、2024+ 內裝收納。</td>
+                  <td>舊 Model 3 中控、腳踏墊、遮陽與收納配件。</td>
+                  <td><a href="https://www.tesla.com/ownersmanual/model3/zh_tw/">Model 3 手冊</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">早期 S / 3 / X，2021-08-01 前</th>
+                  <td>TPC 車端先看 J1772 轉接器；Tesla 標示最高 19.2 kW。</td>
+                  <td>CCS2 轉接頭適用區間需逐車核對，官方標示最高 250 kW，不適用慢充。</td>
+                  <td>TPC 壁掛座或旅充、J1772 慢充轉接器、CCS2 適配確認。</td>
+                  <td>未確認車端與原廠適配前，先避開高電流第三方轉接頭。</td>
+                  <td><a href="https://shop.tesla.com/zh_tw/product/sae-j1772-adapter">J1772</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
 
-            <div class="model-fit-panel">
-              <dl class="model-fit-list">
-                <div>
-                  <dt>慢充</dt>
-                  <dd id="modelSlow">Type 2 壁掛式充電座，家充、公司車位、目的地充電先看電容量與槍頭。</dd>
-                </div>
-                <div>
-                  <dt>快充</dt>
-                  <dd id="modelFast">第三方快充先看 CCS2 規格、站點功率、付款 App 與車端適配。</dd>
-                </div>
-                <div>
-                  <dt>先買</dt>
-                  <dd id="modelStarter">Type 2 壁掛座、螢幕保護貼、補胎打氣組、2025+ 後廂墊。</dd>
-                </div>
-                <div>
-                  <dt>避開</dt>
-                  <dd id="modelAvoid">後廂墊、遮陽、收納和椅背墊需看 2025+ 或 Juniper 標示。</dd>
-                </div>
-              </dl>
-              <div class="model-source-row">
-                <a class="source-chip" id="modelPrimaryLink" href="accessories.html#owner-accessories">看完整配件清單</a>
-                <a class="source-chip" href="https://shop.tesla.com/zh_tw/product/type-2-wall-connector" target="_blank" rel="noopener noreferrer">Tesla Type 2 來源</a>
-                <a class="source-chip" href="https://shop.tesla.com/zh_tw/product/ccs-combo-2-adapter" target="_blank" rel="noopener noreferrer">Tesla CCS2 來源</a>
-                <a class="source-chip" href="https://shop.tesla.com/zh_tw/product/sae-j1772-adapter" target="_blank" rel="noopener noreferrer">Tesla J1772 來源</a>
-              </div>
-            </div>
+      <section class="guide-band guide-white" id="owner-setup" aria-labelledby="owner-setup-title">
+        <div class="container">
+          <div class="section-heading compact">
+            <p class="eyebrow dark">新手流程</p>
+            <h2 id="owner-setup-title">下訂到第一個月</h2>
+            <p>買車前先處理充電與成本；交車後先完成 App、手機鑰匙、付款、保固截圖和第一週補電路線。</p>
+          </div>
+
+          <div class="beginner-stats" aria-label="新手必看數字">
+            <article>
+              <span>交車</span>
+              <strong>30-40 分鐘</strong>
+              <p>Tesla 台灣交付頁說明交付中心取車流程約需 30-40 分鐘，建議提早 5-10 分鐘抵達。</p>
+            </article>
+            <article>
+              <span>基本保固</span>
+              <strong>4 年 / 80,000 km</strong>
+              <p>新車基本車輛有限保固以先到者為準；電池與驅動單元另依車型看 8 年與里程。</p>
+            </article>
+            <article>
+              <span>道路救援</span>
+              <strong>0809 007518</strong>
+              <p>Tesla 道路救援提供 24 小時全年無休支援；所在地不安全時先聯絡緊急服務。</p>
+            </article>
+            <article>
+              <span>App</span>
+              <strong>交付後啟用</strong>
+              <p>車輛交付且 App 存取權啟用後，可使用手機鑰匙、充電、恆溫、付款與服務預約。</p>
+            </article>
+          </div>
+
+          <div class="dense-table-wrap" tabindex="0" aria-label="Tesla 新手流程表">
+            <table class="dense-table">
+              <thead>
+                <tr>
+                  <th scope="col">階段</th>
+                  <th scope="col">先處理</th>
+                  <th scope="col">車主檢查</th>
+                  <th scope="col">官方入口</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">下訂前</th>
+                  <td>試駕、固定車位、家充施工、年里程、保險、輪胎預算。</td>
+                  <td>沒有家充時，先列每週主站、備用站、停車費和等待時間。</td>
+                  <td><a href="https://www.tesla.com/zh_TW/support/ordering-new-vehicle">訂購車輛</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">交車前</th>
+                  <td>Tesla 帳戶、付款、登記、保險、交付地點、第一週充電路線。</td>
+                  <td>先下載 App，交車當天帶政府核發有效證件。</td>
+                  <td><a href="https://www.tesla.com/zh_tw/support/taking-delivery">交付當日</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">交車當天</th>
+                  <td>車身、內裝、鑰匙卡、隨車物品、手機鑰匙、付款方式。</td>
+                  <td>不要急著開走，先設定充電上限、駕駛人資料、行車紀錄器。</td>
+                  <td><a href="https://www.tesla.com/zh_tw/support/tesla-app">Tesla App</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">第一週</th>
+                  <td>胎壓、常用導航、Wi-Fi、超充付款、哨兵模式、鑰匙卡位置。</td>
+                  <td>記錄日常耗電與固定補電時間，確認家人會用基本功能。</td>
+                  <td><a href="https://www.tesla.com/ownersmanual/modely/zh_tw/">Model Y 手冊</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">第一個月</th>
+                  <td>輪胎胎面、濾網週期、保固截圖、服務中心、道路救援電話。</td>
+                  <td>把維修等待、鈑噴、保險理賠和代步安排放進長期用車成本。</td>
+                  <td><a href="https://www.tesla.com/zh_tw/support/vehicle-maintenance">車輛保養</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">中古車</th>
+                  <td>所有權轉移、保固剩餘、超充權限、充電孔、事故維修紀錄。</td>
+                  <td>第三方購車要確認前車主權限移除，一台車一次只有一個車主帳戶。</td>
+                  <td><a href="https://www.tesla.com/zh_tw/support/how-add-or-remove-vehicles-tesla-app">新增或移除車輛</a></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -477,6 +534,80 @@
             </p>
           </div>
 
+          <div class="connector-gallery compact-gallery" id="connector-specs" aria-label="充電接頭圖片">
+            <article>
+              <img src="assets/accessories/type2-wall-connector.webp" alt="Type 2 壁掛式充電座" width="1200" height="1200" loading="lazy">
+              <h3>Type 2</h3>
+              <p>家充、公司車位、目的地充電與停車場慢充常見。</p>
+            </article>
+            <article>
+              <img src="assets/accessories/ccs2-adapter.webp" alt="CCS2 轉接頭" width="1200" height="1200" loading="lazy">
+              <h3>CCS2</h3>
+              <p>第三方 DC 快充常見；Tesla CCS2 轉接頭不適用慢充。</p>
+            </article>
+            <article>
+              <img src="assets/accessories/tpc-wall-connector.webp" alt="TPC 壁掛式充電座" width="1200" height="1200" loading="lazy">
+              <h3>TPC</h3>
+              <p>台灣舊款 Tesla 規格，2021-08-01 前交付車先核對。</p>
+            </article>
+            <article>
+              <img src="assets/accessories/j1772-adapter.webp" alt="SAE J1772 轉接器" width="1200" height="1200" loading="lazy">
+              <h3>J1772</h3>
+              <p>第三方 AC 慢充介面；TPC 車主常需轉接器。</p>
+            </article>
+          </div>
+
+          <div class="dense-table-wrap" tabindex="0" aria-label="台灣常見充電接頭規格表">
+            <table class="dense-table">
+              <thead>
+                <tr>
+                  <th scope="col">規格</th>
+                  <th scope="col">AC / DC</th>
+                  <th scope="col">台灣常見用途</th>
+                  <th scope="col">車主確認</th>
+                  <th scope="col">主要風險</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Type 2</th>
+                  <td>AC 慢充</td>
+                  <td>家充、目的地充電、公司與停車場慢充。</td>
+                  <td>車端 Type 2 或 CCS2 的 AC 端。</td>
+                  <td>社區施工、電容量、計費、槍頭與停車動線。</td>
+                </tr>
+                <tr>
+                  <th scope="row">CCS2</th>
+                  <td>DC 快充</td>
+                  <td>第三方快充、長途備援、無家充補電。</td>
+                  <td>車款、轉接頭適用範圍、站點功率。</td>
+                  <td>官方 CCS2 轉接頭不適用慢充；實際功率受電池狀態影響。</td>
+                </tr>
+                <tr>
+                  <th scope="row">TPC</th>
+                  <td>AC 慢充 / Tesla 舊規格</td>
+                  <td>舊款 Tesla 家充、旅充、目的地充電。</td>
+                  <td>2021-08-01 前交付新車或中古舊規格車。</td>
+                  <td>不能只用年式推測，需看車端、手冊與實車。</td>
+                </tr>
+                <tr>
+                  <th scope="row">SAE J1772</th>
+                  <td>AC 慢充</td>
+                  <td>第三方慢充站、早期公共充電設備。</td>
+                  <td>TPC 車主需確認 J1772 轉接器適用性。</td>
+                  <td>第三方站點價格、會員 App、停車費由營運商制定。</td>
+                </tr>
+                <tr>
+                  <th scope="row">CHAdeMO / CCS1</th>
+                  <td>DC 快充</td>
+                  <td>舊站點、進口車、多規格站點。</td>
+                  <td>相容轉接與車端支援。</td>
+                  <td>看到多規格站點不等於台灣 Tesla 一定可用。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           <div class="charging-grid">
             <article class="charging-card">
               <span class="charging-badge">AC</span>
@@ -599,41 +730,142 @@
         </div>
       </section>
 
-      <section class="affiliate-band" id="buyer-links" aria-labelledby="buyer-links-title">
+      <section class="affiliate-band" id="accessory-guide" aria-labelledby="accessory-guide-title">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow dark">購車與配件</p>
-            <h2 id="buyer-links-title">推薦碼與配件入口</h2>
+            <p class="eyebrow dark">配件導購</p>
+            <h2 id="accessory-guide-title">交車後常用配件</h2>
             <p>
-              購車推薦碼、配件商店與分潤申請入口集中在這裡。配件規格與圖片在圖鑑頁。
+              先買會影響充電、安全與清潔的東西。內裝、收納、遮陽和保護類配件，先對車型年份再下單。
             </p>
           </div>
 
-          <div class="affiliate-hero-card">
+          <div class="product-card-grid">
+            <article class="product-card">
+              <img src="assets/accessories/type2-wall-connector.webp" alt="第三代壁掛式 Type 2 充電座" width="1200" height="1200" loading="lazy">
+              <div>
+                <span class="affiliate-label">Type 2 / AC</span>
+                <h3>壁掛式充電座</h3>
+                <p>固定車位優先處理。安裝前先確認電容量、管委會、配線、消防與計費。</p>
+                <a class="source-chip" href="https://shop.tesla.com/zh_tw/product/type-2-wall-connector" target="_blank" rel="sponsored noopener noreferrer">Tesla 產品頁</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="assets/accessories/mobile-connector.webp" alt="第二代旅行用 Type 2 充電座套件" width="1200" height="1200" loading="lazy">
+              <div>
+                <span class="affiliate-label">旅充 / 備援</span>
+                <h3>旅行用充電座套件</h3>
+                <p>臨時慢充和長途備援用。先看插座接地、插座規格、延長線限制和充電時間。</p>
+                <a class="source-chip" href="https://shop.tesla.com/zh_tw/product/type-2-universal-mobile-connector-bundle" target="_blank" rel="sponsored noopener noreferrer">Tesla 產品頁</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="assets/accessories/ccs2-adapter.webp" alt="Tesla CCS2 轉接頭" width="1200" height="1200" loading="lazy">
+              <div>
+                <span class="affiliate-label">CCS2 / DC</span>
+                <h3>CCS2 轉接頭</h3>
+                <p>指定舊款 Model S / 3 / X 使用第三方 CCS2 快充時核對。官方標示不適用慢充。</p>
+                <a class="source-chip" href="https://shop.tesla.com/zh_tw/product/ccs-combo-2-adapter" target="_blank" rel="sponsored noopener noreferrer">Tesla 產品頁</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="assets/accessories/j1772-adapter.webp" alt="SAE J1772 充電轉接器" width="1200" height="1200" loading="lazy">
+              <div>
+                <span class="affiliate-label">J1772 / AC</span>
+                <h3>SAE J1772 轉接器</h3>
+                <p>TPC 車主使用 J1772 慢充站時核對。站點費率、會員 App 與停車費另看營運商。</p>
+                <a class="source-chip" href="https://shop.tesla.com/zh_tw/product/sae-j1772-adapter" target="_blank" rel="sponsored noopener noreferrer">Tesla 產品頁</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="product-card-grid accessory-products">
+            <article class="product-card">
+              <img src="assets/accessories/trunk-liner.webp" alt="Model Y 行李廂全套組合" width="1400" height="933" loading="lazy">
+              <div>
+                <span class="affiliate-label">Model Y / 防水</span>
+                <h3>後廂墊與椅背墊</h3>
+                <p>露營、嬰兒車、寵物與濕物會用到。Model Y 煥新版需看 2025+ 標示。</p>
+                <a class="source-chip" href="https://global.jowua-life.com/products/model-y-trunk-combo" target="_blank" rel="sponsored noopener noreferrer">JOWUA 產品頁</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="assets/accessories/screen-protector.webp" alt="Model 3/Y 螢幕保護貼" width="1200" height="800" loading="lazy">
+              <div>
+                <span class="affiliate-label">Model 3/Y / 螢幕</span>
+                <h3>中控螢幕保護貼</h3>
+                <p>交車後第一週處理。Matte、Crystal Clear、抗眩和防指紋依使用習慣選。</p>
+                <a class="source-chip" href="https://www.jowua-life.com/products/tempered-glass-screen-protector-model3y" target="_blank" rel="sponsored noopener noreferrer">JOWUA 產品頁</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img src="assets/accessories/tire-repair-kit.webp" alt="Tesla 補胎打氣組" width="1200" height="1200" loading="lazy">
+              <div>
+                <span class="affiliate-label">輪胎 / 臨時處理</span>
+                <h3>補胎打氣組</h3>
+                <p>Tesla 產品頁提醒只作臨時修補；胎面破洞大於 6 mm 或胎壁破損不可使用。</p>
+                <a class="source-chip" href="https://shop.tesla.com/product/tire-repair-kit?tesla_logged_in=Y" target="_blank" rel="sponsored noopener noreferrer">Tesla 產品頁</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="dense-table-wrap" tabindex="0" aria-label="配件購買順序表">
+            <table class="dense-table">
+              <thead>
+                <tr>
+                  <th scope="col">情境</th>
+                  <th scope="col">先買</th>
+                  <th scope="col">等熟悉後再買</th>
+                  <th scope="col">車主確認</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">固定車位</th>
+                  <td>壁掛座、線纜收納、防水腳踏墊。</td>
+                  <td>停車位收納、車庫清潔、延伸照明。</td>
+                  <td>電容量、管委會、施工報價、台電檢驗。</td>
+                </tr>
+                <tr>
+                  <th scope="row">無家充</th>
+                  <td>旅充備援、胎壓表、補胎工具、常用 App。</td>
+                  <td>行李廂收納、露營用電配件。</td>
+                  <td>每週固定站點、停車費、等待時間、站點功率。</td>
+                </tr>
+                <tr>
+                  <th scope="row">小孩或寵物</th>
+                  <td>後廂墊、後排椅背保護、清潔用品。</td>
+                  <td>寵物墊、後座收納、遮陽配件。</td>
+                  <td>椅背、後廂、腳踏墊需對年份與座椅配置。</td>
+                </tr>
+                <tr>
+                  <th scope="row">第三方站</th>
+                  <td>依車端規格買 J1772 或 CCS2 轉接頭。</td>
+                  <td>高電流第三方轉接或延伸設備。</td>
+                  <td>慢充和快充分開；先看原廠產品頁與車主手冊。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="affiliate-hero-card" id="buyer-links">
             <div>
               <p class="eyebrow">Tesla 推薦碼</p>
               <h3>Tesla 推薦連結</h3>
               <p>
-                透過這個 Tesla 推薦連結購車，最高可折抵 NT$8,000。實際優惠、適用車款與活動期間，仍以 Tesla 結帳頁顯示為準。
+                透過這個 Tesla 推薦連結購車，最高可折抵 NT$8,000。實際優惠、適用車款與活動期間，以 Tesla 結帳頁顯示為準。
               </p>
               <code>https://ts.la/wulingteen795928</code>
             </div>
             <a class="button primary" href="https://ts.la/wulingteen795928" target="_blank" rel="sponsored noopener noreferrer">打開推薦連結</a>
           </div>
 
-          <div class="affiliate-grid" aria-label="Tesla 配件導購摘要">
-            <article class="affiliate-card affiliate-card-feature">
-              <span class="affiliate-label">完整頁面</span>
-              <h3>配件與接頭圖鑑</h3>
-              <ul>
-                <li>Type 2、CCS2、TPC、J1772 規格差異。</li>
-                <li>壁掛座、旅充、CCS2/J1772 轉接頭產品圖。</li>
-                <li>腳踏墊、後廂墊、螢幕保護貼、補胎工具。</li>
-                <li>商店、分潤申請入口與來源列在同頁。</li>
-              </ul>
-              <a class="source-chip" href="accessories.html">打開配件圖鑑</a>
-            </article>
-
+          <div class="affiliate-grid" aria-label="配件商與分潤入口">
             <article class="affiliate-card">
               <span class="affiliate-label">可做導購</span>
               <h3>JOWUA</h3>
@@ -657,49 +889,20 @@
             <article class="affiliate-card">
               <span class="affiliate-label">申請入口</span>
               <h3>Abstract Ocean</h3>
-              <p>Tesla / Rivian 配件商，頁尾有分潤申請入口。適合找保護貼、內裝整理和小型實用配件。</p>
+              <p>Tesla / Rivian 配件商，頁尾有分潤申請入口。導購前需取得個人追蹤連結。</p>
               <div class="affiliate-actions">
                 <a class="source-chip" href="https://www.abstractocean.com/" target="_blank" rel="noopener noreferrer">商店</a>
                 <a class="source-chip" href="https://www.abstractocean.com/" target="_blank" rel="noopener noreferrer">頁尾申請</a>
               </div>
             </article>
-          </div>
 
-          <p class="affiliate-disclosure">
-            導購揭露：Tesla 推薦連結可能帶來購車優惠或推薦回饋。配件頁列出商店與分潤申請入口；實際分潤依商店核准帳號與追蹤連結為準。
-          </p>
-        </div>
-      </section>
-
-      <section class="split-band" aria-labelledby="why-title">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow dark">車主經驗</p>
-            <h2 id="why-title">用車監控項目</h2>
-            <p>
-              每週查家充比例、胎壓胎面、保險保固、OTA 變化與維修等待。這些項目會改變年度成本。
-            </p>
-          </div>
-
-          <div class="lens-grid">
-            <article class="lens-card owner">
-              <span class="lens-icon" aria-hidden="true">kWh</span>
-              <h3>每週會看</h3>
+            <article class="affiliate-card affiliate-card-feature">
+              <span class="affiliate-label">揭露</span>
+              <h3>推薦與分潤標示</h3>
               <ul>
-                <li>家充比例、旅途快充可用性與尖離峰費率。</li>
-                <li>輪胎、保險、保固、電池衰退與二手殘值。</li>
-                <li>OTA 後的能耗、輔助駕駛、車機與安全功能變化。</li>
-                <li>維修等待時間、鈑噴能力與事故後料件可得性。</li>
-              </ul>
-            </article>
-            <article class="lens-card trip">
-              <span class="lens-icon" aria-hidden="true">Trip</span>
-              <h3>出遠門前會查</h3>
-              <ul>
-                <li>目的地附近有沒有可用充電站和備用站點。</li>
-                <li>高速耗電、天氣、載重和回程電量留保守餘裕。</li>
-                <li>旅館、商場、景點停車場的慢充可用性。</li>
-                <li>同行家人可接受的充電停留時間與路線安排。</li>
+                <li>Tesla 推薦連結可能帶來購車優惠或推薦回饋。</li>
+                <li>配件商需核准帳號並產生專屬追蹤連結後才會分潤。</li>
+                <li>價格、庫存、適用車款與保固以商店頁面為準。</li>
               </ul>
             </article>
           </div>
@@ -707,19 +910,13 @@
       </section>
 
       <section class="radar-band" id="radar" aria-labelledby="radar-title">
-        <div class="container radar-layout">
+        <div class="container">
           <div class="section-heading">
             <p class="eyebrow">檢查清單</p>
-            <h2 id="radar-title">情境檢查清單</h2>
+            <h2 id="radar-title">日常、長途、保養檢查表</h2>
             <p>
-              日常看胎壓和補電；長途看快充與備用站；保養看輪胎、濾網、煞車油。
+              不做切換。所有情境直接放在同一張表，定期看胎壓、補電路線、保固日期、輪胎與服務等待。
             </p>
-            <div class="mode-switch" role="group" aria-label="切換檢查清單情境">
-              <button class="mode-button is-active" type="button" data-mode="all">全部</button>
-              <button class="mode-button" type="button" data-mode="daily">日常</button>
-              <button class="mode-button" type="button" data-mode="trip">長途</button>
-              <button class="mode-button" type="button" data-mode="service">保養</button>
-            </div>
           </div>
 
           <div class="owner-board" aria-label="Tesla 車主檢查看板">
@@ -744,53 +941,63 @@
               <p>保險、輪胎、二手估價、保固日期。</p>
             </article>
           </div>
-        </div>
 
-        <div class="container signal-grid" aria-live="polite">
-          <article class="signal-card" data-audience="daily">
-            <p class="signal-tag">日常</p>
-            <h3>補電路線</h3>
-            <p>
-              快充速度、站點空位、尖離峰價差與電池預熱，都會影響實際停留時間。
-            </p>
-          </article>
-          <article class="signal-card" data-audience="trip">
-            <p class="signal-tag">長途</p>
-            <h3>高速耗電留餘裕</h3>
-            <p>
-              逆風、雨天、滿載、冷氣和山路都會拉高耗電。長途規劃寧可多留 10% 到 15% 電量。
-            </p>
-          </article>
-          <article class="signal-card" data-audience="daily">
-            <p class="signal-tag">日常</p>
-            <h3>高電量停放別變成日常</h3>
-            <p>
-              高速快充頻率、長時間高電量停放、氣候與輪胎設定都會影響耗電與衰退。
-              固定的充電與停放習慣比單次續航數字更重要。
-            </p>
-          </article>
-          <article class="signal-card" data-audience="service">
-            <p class="signal-tag">保養</p>
-            <h3>輪胎和定位要放進預算</h3>
-            <p>
-              電動車扭力大、車重高，輪胎耗損常比新車主想像快。定期看胎壓、胎面和定位會省下不少麻煩。
-            </p>
-          </article>
-          <article class="signal-card" data-audience="daily">
-            <p class="signal-tag">日常</p>
-            <h3>OTA 更新後觀察一週</h3>
-            <p>
-              續航估算、雨刷、輔助駕駛、車機反應和安全提醒都可能被軟體更新改變。
-              更新後建議記錄一週，並核對發布說明。
-            </p>
-          </article>
-          <article class="signal-card" data-audience="service">
-            <p class="signal-tag">保養</p>
-            <h3>維修等待時間也算用車成本</h3>
-            <p>
-              事故鈑噴、料件等待、保險理賠和代步安排，會比一般保養更影響車主體驗。
-            </p>
-          </article>
+          <div class="dense-table-wrap vertical-table-wrap dark-table-wrap" tabindex="0" aria-label="Tesla 車主檢查清單總表">
+            <table class="dense-table dark-dense-table">
+              <thead>
+                <tr>
+                  <th scope="col">週期</th>
+                  <th scope="col">檢查</th>
+                  <th scope="col">標準</th>
+                  <th scope="col">處理</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">每天</th>
+                  <td>充電上限、排程、停車位置、胎壓提醒。</td>
+                  <td>日常通勤固定補回，避免長時間高電量停放。</td>
+                  <td>有異常提醒先拍照，保留 App 記錄。</td>
+                </tr>
+                <tr>
+                  <th scope="row">每週</th>
+                  <td>耗電變化、雨刷、胎面、異音、OTA 後功能。</td>
+                  <td>更新後觀察一週，記錄續航估算、雨刷、藍牙與輔助駕駛。</td>
+                  <td>異常持續出現，用 App 建立服務預約。</td>
+                </tr>
+                <tr>
+                  <th scope="row">每月</th>
+                  <td>輪胎胎面、冷胎胎壓、前後磨耗差、定位感受。</td>
+                  <td>Model 3 / Y 輪胎每 10,000 公里或胎紋差大於 1.5 mm 時換位。</td>
+                  <td>磨耗不均時先處理定位，再估輪胎預算。</td>
+                </tr>
+                <tr>
+                  <th scope="row">長途前</th>
+                  <td>快充站、備用站、目的地停車、天氣、載重、回程電量。</td>
+                  <td>雨天、逆風、滿載、山路保守多留 10% 到 15% 電量。</td>
+                  <td>住宿優先找過夜慢充，第三方站先看槍頭與付款 App。</td>
+                </tr>
+                <tr>
+                  <th scope="row">保養</th>
+                  <td>濾網、煞車油檢測、雨刷、空調味道、輪胎。</td>
+                  <td>車廂空氣濾網 Model 3 / Y 每 2 年；煞車油每 4 年檢測一次。</td>
+                  <td>輪胎和定位放進年度成本，不要只看電費。</td>
+                </tr>
+                <tr>
+                  <th scope="row">年度</th>
+                  <td>保險、保固日期、二手估價、服務中心距離、鈑噴資源。</td>
+                  <td>基本保固 4 年或 80,000 公里，電池與驅動單元另依車型。</td>
+                  <td>保固尾端前先處理異音、警示燈、充電異常和高額耗材。</td>
+                </tr>
+                <tr>
+                  <th scope="row">事故後</th>
+                  <td>拖吊、保險理賠、授權鈑噴、料件等待、代步安排。</td>
+                  <td>所在地不安全時先聯絡緊急服務，再處理道路救援。</td>
+                  <td>把維修等待時間算進實際用車成本。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
@@ -903,8 +1110,63 @@
             </article>
             <article class="faq-card">
               <h3>股價查詢只放在附錄</h3>
-              <p>股價頁只作附錄。首頁動線放充電、耗電、保養、保固、配件、交車與長途用車資訊。</p>
+              <p>股價資訊留在頁尾附錄。首頁動線仍以充電、耗電、保養、保固、配件、交車與長途用車為主。</p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide-band guide-white" id="market-appendix" aria-labelledby="market-appendix-title">
+        <div class="container">
+          <div class="section-heading compact">
+            <p class="eyebrow dark">股價附錄</p>
+            <h2 id="market-appendix-title">免費資料來源與相關企業</h2>
+            <p>股價資訊只作延伸研究。免費報價可能延遲、限流或變更 API，正式交易前以券商與交易所資料為準。</p>
+          </div>
+
+          <div class="dense-table-wrap" tabindex="0" aria-label="Tesla 相關企業與免費資料來源">
+            <table class="dense-table">
+              <thead>
+                <tr>
+                  <th scope="col">標的</th>
+                  <th scope="col">關聯</th>
+                  <th scope="col">車主看點</th>
+                  <th scope="col">免費來源</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">TSLA</th>
+                  <td>Tesla 主體。</td>
+                  <td>交付量、車價、毛利、能源儲能、FSD、服務網路。</td>
+                  <td><a href="https://finance.yahoo.com/quote/TSLA">Yahoo Finance</a>、<a href="https://ir.tesla.com/">Tesla IR</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">PANW</th>
+                  <td>資安供應鏈觀察。</td>
+                  <td>車聯網、雲端帳戶、OTA 與資料安全趨勢。</td>
+                  <td><a href="https://finance.yahoo.com/quote/PANW">Yahoo Finance</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">NVDA</th>
+                  <td>AI 算力與自駕生態。</td>
+                  <td>車載運算、AI 訓練、機器人與資料中心成本。</td>
+                  <td><a href="https://finance.yahoo.com/quote/NVDA">Yahoo Finance</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">ALB</th>
+                  <td>鋰與電池材料。</td>
+                  <td>電池成本、原料價格與供應鏈壓力。</td>
+                  <td><a href="https://finance.yahoo.com/quote/ALB">Yahoo Finance</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">現金流資料</th>
+                  <td>財報與申報。</td>
+                  <td>用來判斷價格戰、研發支出、資本支出和庫存變化。</td>
+                  <td><a href="https://www.sec.gov/edgar/browse/?CIK=1318605">SEC EDGAR</a></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -926,9 +1188,9 @@
               </a>
             </li>
             <li>
-              <a href="accessories.html">
-                <span>配件與接頭圖鑑</span>
-                <small>充電接頭、轉接頭、家充設備與交車配件圖片與來源集中整理。</small>
+              <a href="#accessory-guide">
+                <span>首頁配件導購區</span>
+                <small>充電接頭、轉接頭、家充設備與交車配件圖片集中在同一頁。</small>
               </a>
             </li>
             <li>
@@ -1022,9 +1284,9 @@
               </a>
             </li>
             <li>
-              <a href="stock-analysis.html">
-                <span>附錄：股價查詢與相關企業</span>
-                <small>股價只作附加研究工具，首頁以車主用車資訊為主。</small>
+              <a href="#market-appendix">
+                <span>附錄：免費股價來源與相關企業</span>
+                <small>股價資訊留在頁尾附錄，首頁以車主用車資訊為主。</small>
               </a>
             </li>
           </ul>
@@ -1039,6 +1301,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20260605-original"></script>
+    <script src="script.js?v=20260606-singlepage"></script>
   </body>
 </html>
