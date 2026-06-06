@@ -1747,6 +1747,17 @@ input {
   color: var(--muted);
 }
 
+.product-card .source-chip {
+  color: var(--graphite);
+  background: var(--paper);
+  border-color: var(--line);
+}
+
+.product-card .source-chip:hover,
+.product-card .source-chip:focus-visible {
+  border-color: var(--red);
+}
+
 .product-card ul {
   margin: 14px 0 16px;
   padding-left: 20px;
