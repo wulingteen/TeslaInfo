@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wulingteen.github.io/TeslaInfo/sitemap.xml
+Sitemap: https://tesla-info.nils.dev/sitemap.xml

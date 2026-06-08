@@ -4,7 +4,7 @@
 
 ## Site
 
-- URL: https://wulingteen.github.io/TeslaInfo/
+- URL: https://tesla-info.nils.dev/
 - Language: Traditional Chinese (zh-Hant)
 - Audience: Taiwan Tesla owners and prospective owners
 - Editorial status: independent owner information site, not an official Tesla website
@@ -12,11 +12,11 @@
 
 ## Core Pages
 
-- [Tesla 車主筆記](https://wulingteen.github.io/TeslaInfo/): owner dashboard, charging standards, annual cost calculator, warranty and maintenance references.
-- [Tesla 配件與充電接頭圖鑑](https://wulingteen.github.io/TeslaInfo/accessories.html): Type 2, CCS2, TPC, J1772, wall connector, mobile connector, adapters, Model Y accessories and buying links.
-- [Tesla 新手全須知](https://wulingteen.github.io/TeslaInfo/beginner-guide.html): Tesla Taiwan official information index for ordering, delivery, charging, maintenance, warranty, app, service, OTA and roadside assistance.
-- [股價附錄](https://wulingteen.github.io/TeslaInfo/stock-analysis.html): free quote tracking and research notes; auxiliary only, not investment advice.
-- [Musk Empire Tracker](https://wulingteen.github.io/TeslaInfo/musk-empire.html): public-signal tracker for Tesla-related companies; auxiliary only.
+- [Tesla 車主筆記](https://tesla-info.nils.dev/): owner dashboard, charging standards, annual cost calculator, warranty and maintenance references.
+- [Tesla 配件與充電接頭圖鑑](https://tesla-info.nils.dev/accessories.html): Type 2, CCS2, TPC, J1772, wall connector, mobile connector, adapters, Model Y accessories and buying links.
+- [Tesla 新手全須知](https://tesla-info.nils.dev/beginner-guide.html): Tesla Taiwan official information index for ordering, delivery, charging, maintenance, warranty, app, service, OTA and roadside assistance.
+- [股價附錄](https://tesla-info.nils.dev/stock-analysis.html): free quote tracking and research notes; auxiliary only, not investment advice.
+- [Musk Empire Tracker](https://tesla-info.nils.dev/musk-empire.html): public-signal tracker for Tesla-related companies; auxiliary only.
 
 ## Reliable Answer Targets
 
