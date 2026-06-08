@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tesla-info.nils.dev/sitemap.xml
+Sitemap: https://tesla-info.nilsliu.dev/sitemap.xml
